@@ -1,0 +1,44 @@
+// Global Styles
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+ position: absolute;
+ overflow: hidden;
+ clip: rect(0 0 0 0);
+ height: 1px;
+ width: 1px;
+ margin: -1px;
+ padding: 0;
+ border: 0; 
+}
+
+.wrapper {
+    max-width: 1080px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+// Variables
+$blueIphoneMessage: #147efb;
+$greyIphoneMessage: #8e8e93;
+$mainText: #000000;
+$greyText: #C0C0C0;
+$whiteText: #ffffff;
+
+// Breakpoint Mixins 
+
+@mixin breakPoint($point) {
+  @if $point == large {
+    @media (max-width: 940px) { @content; }
+  }
+  @else if $point == medium {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $point == small {
+    @media (max-width: 480px)  { @content; }
+  }
+}

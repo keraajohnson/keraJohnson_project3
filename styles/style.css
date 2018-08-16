@@ -155,59 +155,89 @@ html {
   font-size: 62.5%;
   font-family: 'Roboto', sans-serif; }
 
-.phone-heading {
-  position: fixed;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: rgba(255, 255, 255, 0.97);
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 20px 20px 10px 20px;
-  border-bottom: 0.5px solid #C0C0C0;
-  font-size: 1.5rem; }
-  .phone-heading .phone-utils {
-    width: 7%; }
-    .phone-heading .phone-utils .bars {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -ms-flex-line-pack: center;
-      align-content: center; }
-  .phone-heading .battery {
+.phone {
+  width: 40%;
+  margin: 0 auto;
+  border: 1px solid black;
+  height: 90vh;
+  position: relative;
+  font-size: 2rem; }
+  .phone .phone-heading {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 5%;
+    font-size: 2.2rem;
+    width: calc(40% - 2px);
+    background-color: rgba(255, 255, 255, 0.97);
+    position: fixed;
+    padding: 20px 20px 10px 20px;
+    border-bottom: 0.5px solid #C0C0C0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 10; }
+    .phone .phone-heading .phone-utils {
+      width: 10%; }
+    .phone .phone-heading .contact-info {
+      width: 80%;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-align: center; }
+    .phone .phone-heading .phone-info {
+      width: 10%;
+      height: 34px;
+      display: block;
+      text-align: center; }
+      .phone .phone-heading .phone-info a {
+        text-decoration: none;
+        padding: 10px; }
+  .phone .phone-body {
+    background: #ffffff;
+    padding-top: 100px;
+    height: 100%; }
+    .phone .phone-body .phone-main {
+      overflow: scroll;
+      height: 460px; }
+      .phone .phone-body .phone-main .relationship-input,
+      .phone .phone-body .phone-main .reason-input,
+      .phone .phone-body .phone-main .tone-input,
+      .phone .phone-body .phone-main .person-input,
+      .phone .phone-body .phone-main .final-message {
+        width: 60%;
+        margin: 30px; }
+        .phone .phone-body .phone-main .relationship-input.hide,
+        .phone .phone-body .phone-main .reason-input.hide,
+        .phone .phone-body .phone-main .tone-input.hide,
+        .phone .phone-body .phone-main .person-input.hide,
+        .phone .phone-body .phone-main .final-message.hide {
+          display: none; }
+        .phone .phone-body .phone-main .relationship-input.speech-bubble,
+        .phone .phone-body .phone-main .reason-input.speech-bubble,
+        .phone .phone-body .phone-main .tone-input.speech-bubble,
+        .phone .phone-body .phone-main .person-input.speech-bubble,
+        .phone .phone-body .phone-main .final-message.speech-bubble {
+          position: relative;
+          background: #0096ff;
+          border-radius: .4em; }
+  .phone .phone-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between; }
-
-.main-heading {
-  height: 100vh; }
-  .main-heading h1 {
-    text-align: center;
-    font-size: 5rem;
-    text-transform: uppercase;
-    padding-top: 200px; }
-  .main-heading p {
-    text-align: center;
-    font-size: 3rem;
-    text-transform: uppercase;
-    padding-top: 20px; }
-  .main-heading .double-arrow {
-    font-size: 4rem;
-    display: block;
-    text-align: center;
-    padding-top: 20px;
-    color: #000000;
-    -webkit-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease; }
-    .main-heading .double-arrow:hover {
-      color: #147efb; }
+    justify-content: space-between;
+    width: 100%;
+    bottom: 0;
+    height: 10vh;
+    background-color: red; }
+    .phone .phone-footer .person-text-field {
+      width: 100%; }
+      .phone .phone-footer .person-text-field .who-question {
+        width: 100%; }
+        .phone .phone-footer .person-text-field .who-question .who-bail {
+          width: 90%;
+          margin: 10px;
+          padding: 10px 0 10px 0; }
+    .phone .phone-footer .submit-button-section .submit-button {
+      border: none; }

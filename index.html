@@ -11,87 +11,96 @@
     <title></title>
 </head>
 <body>
-    <header>
-        <section class="phone-heading">
-            <div class="phone-utils ">
-                <div class="bars">
-                    <i class="fas fa-signal"></i>
-                    <p>GTFO</p>
-                    <i class="fas fa-wifi"></i>
-                </div>
-            </div>
-            <div class="contact-info">
-                <p>12:56 PM</p>
-                <img src="" alt="">
-                <span id="emoji">😴 Ugh</span>
-            </div>
-            <div class="battery">
-                <p>76%</p>
-                <i class="fas fa-battery-three-quarters"></i>
-            </div>
-        </section>
-        <section class="main-heading">
-            <div class="wrapper">
-                <h1>Heading for this app that doesn't have a name yet</h1>
-                <p>An app for when you just can't even</p>
-                <a class="double-arrow" href="#person-input"><i class="fas fa-angle-double-down"></i></a>
-            </div>
-        </section>
-    </header>
     <main>
-        <form action="">
-            <div class="wrapper">
-                <section class="person-input" id="person-input">
-                    <h2>Who are you bailing on?</h2>
-                    <label for="who-bail" class="visually-hidden"></label>
-                    <input type="text" name="who-bail" class="who-bail" id="who-bail"  value="">
-                </section>
-                <section class="number-input">
-                    <h2>What are their digits</h2>
-                    <label for="phone-number"></label>
-                    <input type="text" name="phone-number" class="phone-number" id="phone-number" value="">
-                </section>
-                <section class="relationship-input">
-                    <h2>Who are they?</h2>
-                    <label for="who-are-they">Just a Friend</label>
-                    <input type="radio" name="who-are-they" class="friend relationship" id="friend" value="friend">
-                    <label for="who-are-they">Family</label>
-                    <input type="radio" name="who-are-they" class="family relationship" id="family" value="family">
-                    <label for="who-are-they">Romantic Partner</label>
-                    <input type="radio" name="who-are-they" class="partner relationship" id="partner" value="partner">
-                </section>
-                <section class="reason-input">
-                    <h2>Why Are You Bailing?</h2>
-                    <label for="why-bail">It’s just like, really hot outside</label>
-                    <input type="radio" name="why-bail" class="really-hot" id="really-hot" value="reallyHot">
-                    <label for="why-bail">I actually got a better offer, so…</label>
-                    <input type="radio" name="why-bail" class="better-offer" id="better-offer" value="betterOffer">
-                    <label for="why-bail"> I’m getting called back to the mothership</label>
-                    <input type="radio" name="why-bail" class="called-back" id="called-back" value="calledBack">
-                    <label for="why-bail">My dog just rolled onto their back and I just can’t</label>
-                    <input type="radio" name="why-bail" class="dog-roll" id="dog-roll" value="dogRoll">
-                    <label for="why-bail">I had a nap earlier and I haven’t recovered yet</label>
-                    <input type="radio" name="why-bail" class="nap-recover" id="nap-recover" value="napRecover">
-                    <label for="why-bail">I have work</label>
-                    <input type="radio" name="why-bail" class="actual-excuse" id="actual-excuse" value="actualExcuse">
-                </section>
-                <section class="tone-input">
-                    <h2>Set The Tone</h2>
-                    <label for="tone">I don't want to be friends anymore</label>
-                    <input type="radio" name="tone" class="friendship-over" id="friendship-over" value="friendshipOver">
-                    <label for="tone">I want to be friends, just not today </label>
-                    <input type="radio" name="tone" class="friends-still" id="friends-still""" value="friendsStill">
-                    <label for="submit-button" class="visually-hidden"></label>
-                    <input type="submit" name="submit" id="submit-button" class="submit-button" value="Get Your Excuse"> 
-                </section>
-            </div>
-        </form>
-        <div class="your-excuse">
-            <i class="fas fa-camera"></i>
-        </div>
-   </main>
+        <!-- 01 phone -->
+        <section class="phone">
+            <!-- 02 phone-heading -->
+            <section class="phone-heading">
+                <!-- 2.1 phone-utilities -->
+                <div class="phone-utils ">
+                    <div class="bars">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                </div>
+                <!-- 2.2 contact-information -->
+                <div class="contact-info">
+                    <span id="emoji">😴</span>
+                </div>
+                <!-- 2.3 phone-information -->
+                <div class="phone-info">
+                    <a href="#"><i class="fas fa-info-circle"></i></a>
+                </div>
+            </section>
+            <!-- 03 phone-body -->
+            <section class="phone-body">
+                <form action="">
+                    <!-- 4 phone-main -->
+                    <section class="phone-main">
+                        <!-- 4.1 relationship-input -->
+                        <section class="relationship-input speech-bubble">
+                            <p>We get it, your friends suck. Who don't you want to hang out with tonight?</p>
+                            <label for="who-are-they">Just a Friend</label>
+                            <input type="radio" name="who-are-they" class="friend relationship" id="friend" value="friend">
+                            <label for="who-are-they">Family</label>
+                            <input type="radio" name="who-are-they" class="family relationship" id="family" value="family">
+                            <label for="who-are-they">Romantic Partner</label>
+                            <input type="radio" name="who-are-they" class="partner relationship" id="partner" value="partner">
+                        </section>
+                        <!-- 4.2 reason-input -->
+                        <section class="reason-input speech-bubble hide">
+                            <h2>Why Are You Bailing?</h2>
+                            <label for="why-bail">It’s just like, really hot outside</label>
+                            <input type="radio" name="why-bail" class="really-hot" id="really-hot" value="reallyHot">
+                            <label for="why-bail">I actually got a better offer, so…</label>
+                            <input type="radio" name="why-bail" class="better-offer" id="better-offer" value="betterOffer">
+                            <label for="why-bail"> I’m getting called back to the mothership</label>
+                            <input type="radio" name="why-bail" class="called-back" id="called-back" value="calledBack">
+                            <label for="why-bail">My dog just rolled onto their back and I just can’t</label>
+                            <input type="radio" name="why-bail" class="dog-roll" id="dog-roll" value="dogRoll">
+                            <label for="why-bail">I had a nap earlier and I haven’t recovered yet</label>
+                            <input type="radio" name="why-bail" class="nap-recover" id="nap-recover" value="napRecover">
+                            <label for="why-bail">I have work</label>
+                            <input type="radio" name="why-bail" class="actual-excuse" id="actual-excuse" value="actualExcuse">
+                        </section>
+                        <!-- 4.3 tone-input -->
+                        <section class="tone-input speech-bubble hide">
+                            <h2>Set The Tone</h2>
+                            <label for="tone">I don't want to be friends anymore</label>
+                            <input type="radio" name="tone" class="friendship-over" id="friendship-over" value="friendshipOver">
+                            <label for="tone">I want to be friends, just not today </label>
+                            <input type="radio" name="tone" class="friends-still" id="friends-still" "" value="friendsStill">
+                        </section>
+                        <!-- 4.4 person-name-input -->
+                        <section class="person-input speech-bubble hide" id="person-input hide">
+                            <p>lastly, who is this fool?</p>
+                            <!-- 5.2 final excuse  -->
+                        </section>
+                        <section class="final-message speech-bubble">
+                            <div class="your-excuse">
+                            
+                            </div>
+                        </section>
+                    </section>
+                    <!-- 5 phone-footer -->
+                    <section class="phone-footer">
+                        <!-- 5.1 text-feild -->
+                        <div class="person-text-field">
+                            <div class="who-question">
+                                <label for="who-bail" class="visually-hidden"></label>
+                                <input type="text" name="who-bail" class="who-bail" id="who-bail" value="">
+                            </div>
+                        </div>
+                        <!-- 5.3 submit-button -->
+                        <div class="submit-button-section">
+                            <label for="submit-button" class="visually-hidden"></label>
+                            <input type="submit" name="submit" id="submit-button" class="submit-button" value="Send">
+                        </div>
+                    </section>
+                </form>
+            </section>
+        </section>
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="scripts/scripts.js"></script>
 </body>
 </html>

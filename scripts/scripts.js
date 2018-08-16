@@ -28,7 +28,7 @@ myApp.messages = [
         relation: 'friend',
         why: 'dogRoll',
         message: function (personName) { 
-            return `${personName} the copy for a friendship over just a friend dog roll`}
+            return `Hey ${personName}! Wow, I totally forgot that we were supposed to hang out. Anyways, I hate to be the bearer of bad news but my dog just literally rolled over into the cutest position. So, I need to cancel (but for reals, I was never going to show anyway). See ya (maybe never?)`}
     },
     {
         tone: 'friendshipOver',
@@ -259,14 +259,10 @@ myApp.messages = [
 ]
 
 myApp.relationshipInfo = {
-    partner: 'BAE 💋',
-    friend: ' FRIEND 👯‍♀️',
-    family: ' FAM 👨‍👩‍👧‍👦 '
+    partner: '💋',
+    friend: '👯‍♀️',
+    family: '👨‍👩‍👧‍👦 '
 }
-
-// myApp.realtionshipImages = {
-//     partner: ''
-// }
 
 myApp.changeHeader = function () {
     $('.relationship').on('click', function() { 
@@ -276,20 +272,24 @@ myApp.changeHeader = function () {
     });
 };
 
-// use the variable of what the person has just clicked on to get it printed to the page 
+myApp.textDisappear = function () {
+    $('input').on('click', function (){
+        $(this).parents().next('section').removeClass('hide');
+    });
+}
+
 myApp.submitChoice = function () {
     $('form').on('submit', function (e) {
         // preventing submit default 
         e.preventDefault();
         // variable to determine what the users realtionship is 
         myApp.personName = $('input[name=who-bail]').val();
-        myApp.personPhoneNumber = $('input[name=phone-number]').val();
+        // myApp.personPhoneNumber = $('input[name=phone-number]').val();
         myApp.userRelationChoice = $('input[name=who-are-they]:checked').val();
         // variable to determine what the users reason why choice is 
         myApp.userWhyBailChoice = $('input[name=why-bail]:checked').val();
         // variable to determine what the users tone choice was 
         myApp.userToneChoice = $('input[name=tone]:checked').val();
-        // console.log(personName, personPhoneNumber, userRelationChoice, userWhyBailChoice, userToneChoice);
 
         // filter method to determine what object should display
         myApp.firstFilteredArray = myApp.messages.filter(message => message.relation === myApp.userRelationChoice);
@@ -300,14 +300,15 @@ myApp.submitChoice = function () {
         console.log(myApp.finalFilteredArray);
 
         $('.your-excuse').html(`<p>${myApp.finalFilteredArray[0].message(myApp.personName)}</p>`);
+
+        $('input').val('');
         });
     };    
-
-
 
 myApp.init = function () {
     myApp.changeHeader();
     myApp.submitChoice();
+    myApp.textDisappear();
 }
 
 $(function() {

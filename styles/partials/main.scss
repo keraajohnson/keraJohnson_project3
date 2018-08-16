@@ -1,0 +1,102 @@
+.phone {
+    // background: red;
+    width: 40%;
+    margin: 0 auto;
+    border: 1px solid black;
+    height: 90vh;
+    position: relative;
+    // overflow: scroll;
+    font-size: 2rem;
+        .phone-heading {
+            @include display-flex;
+            font-size: 2.2rem;
+            width: calc(40% - 2px);
+            background-color: rgba(255,255,255,0.97);
+            position: fixed;
+            padding: 20px 20px 10px 20px;
+            border-bottom: 0.5px solid $grey;
+            align-items: center;
+            z-index: 10;
+                .phone-utils {
+                    width: 10%;
+                }
+                .contact-info {
+                    width: 80%;
+                    justify-content: center;
+                    text-align: center;
+                }
+                .phone-info {
+                  width: 10%;
+                  height: 34px;
+                  display: block;
+                  text-align: center;
+                    a {
+                        text-decoration: none;
+                        padding: 10px
+                    }
+                }
+        }
+        .phone-body {
+            background: $white;
+            padding-top: 100px;
+            height: 100%;
+                .phone-main {
+                    overflow: scroll;
+                    height: 460px;
+                    .relationship-input,
+                    .reason-input,
+                    .tone-input,
+                    .person-input, 
+                    .final-message 
+                     {
+                        width: 60%;
+                        margin: 30px;
+                            &.hide {
+                                 display: none;
+                            }
+                            &.speech-bubble {
+                                 position: relative; 
+                                 background: #0096ff; 
+                                 border-radius: .4em; 
+                            }
+                    }
+                    .relationship-input {
+
+                    }
+                    .reason-input {
+
+                    }
+                    .tone-input {
+            
+                    }
+                    .person-input {
+
+                    }
+                }       
+        }
+        .phone-footer {
+            @include display-flex;
+            justify-content: space-between;
+            width: 100%;
+            bottom: 0;
+            height: 10vh;
+            background-color: red;
+                .person-text-field {
+                    width: 100%;
+                    .who-question {
+                        width: 100%;
+                            .who-bail {
+                                width: 90%;
+                                margin: 10px;
+                                padding: 10px 0 10px 0;
+                            }
+                    }
+                } 
+                .submit-button-section {
+                   .submit-button {
+                       border: none;
+                   } 
+                }   
+            
+        }
+}

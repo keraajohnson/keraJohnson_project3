@@ -22,12 +22,25 @@
     margin: 0 auto;
 }
 
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
 // Variables
 $blueIphoneMessage: #147efb;
 $greyIphoneMessage: #8e8e93;
-$mainText: #000000;
-$greyText: #C0C0C0;
-$whiteText: #ffffff;
+$black: #000000;
+$grey: #C0C0C0;
+$white: #ffffff;
+
+// Style Mixins
+
+@mixin display-flex() {
+  display: flex;
+}
 
 // Breakpoint Mixins 
 

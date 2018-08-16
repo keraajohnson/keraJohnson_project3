@@ -1,0 +1,50 @@
+.phone-heading {
+    position: fixed;
+    width: 100%;
+    @include display-flex;
+    background-color: rgba(255,255,255,0.97);
+    justify-content: space-between;
+    padding: 20px 20px 10px 20px;
+    border-bottom: 0.5px solid $grey;
+    font-size: 1.5rem;
+        .phone-utils {
+            width: 7%;
+                .bars {
+                    @include display-flex;
+                    justify-content: space-between;
+                    align-content: center;
+                }
+        }
+        .battery {
+            @include display-flex;
+            width: 5%;
+            justify-content: space-between;
+        }
+}
+
+.main-heading {
+    height: 100vh;
+        h1 {
+            text-align: center;
+            font-size: 5rem;
+            text-transform: uppercase;
+            padding-top: 200px;
+        }
+        p {
+            text-align: center;
+            font-size: 3rem;
+            text-transform: uppercase;
+            padding-top: 20px;
+        }
+        .double-arrow {
+            font-size: 4rem;
+            display: block;
+            text-align: center;
+            padding-top: 20px;
+            color: $black;
+            transition: all 1s ease;
+                &:hover {
+                    color: $blueIphoneMessage;
+                }
+        }
+}

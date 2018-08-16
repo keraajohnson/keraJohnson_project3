@@ -150,3 +150,64 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   max-width: 1080px;
   width: 80%;
   margin: 0 auto; }
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif; }
+
+.phone-heading {
+  position: fixed;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.97);
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px 20px 10px 20px;
+  border-bottom: 0.5px solid #C0C0C0;
+  font-size: 1.5rem; }
+  .phone-heading .phone-utils {
+    width: 7%; }
+    .phone-heading .phone-utils .bars {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -ms-flex-line-pack: center;
+      align-content: center; }
+  .phone-heading .battery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 5%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+
+.main-heading {
+  height: 100vh; }
+  .main-heading h1 {
+    text-align: center;
+    font-size: 5rem;
+    text-transform: uppercase;
+    padding-top: 200px; }
+  .main-heading p {
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding-top: 20px; }
+  .main-heading .double-arrow {
+    font-size: 4rem;
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    color: #000000;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+    .main-heading .double-arrow:hover {
+      color: #147efb; }

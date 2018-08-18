@@ -278,7 +278,7 @@ myApp.textDisappear = function () {
         
         function hideDots() {
             $('.typing-indicator').removeClass('hide-dots');
-            setTimeout(showDots, 1000);
+            setTimeout(showDots, 2000);
         };
 
         hideDots();
@@ -287,7 +287,7 @@ myApp.textDisappear = function () {
             $('.typing-indicator').addClass('hide-dots');
             getParents.next('section').removeClass('hide');
             myApp.updateScroll(); 
-        }     
+        }   
       
     });
 }  
@@ -295,9 +295,9 @@ myApp.textDisappear = function () {
 myApp.updateScroll = function () {
     var element = document.getElementById("phone-main");
     element.scrollTop = element.scrollHeight;
-    console.log(element.scrollHeight);
-}
 
+    console.log(element.scrollHeight)
+}
 
 myApp.submitChoice = function () {
     $('form').on('submit', function (e) {
@@ -321,6 +321,8 @@ myApp.submitChoice = function () {
         console.log(myApp.finalFilteredArray);
 
         $('.final-message').removeClass('hide');
+        $('.typing-indicator').addClass('hide-dots');
+        // myApp.updateScroll();
 
         $('.your-excuse').html(`<p>${myApp.finalFilteredArray[0].message(myApp.personName)}</p>`);
 
@@ -336,5 +338,6 @@ myApp.init = function () {
 
 $(function() {
     myApp.init(); 
+    
 });
     

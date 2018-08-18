@@ -168,12 +168,22 @@ body {
   width: 40%;
   margin: 0 auto;
   margin-top: 25px;
-  height: 90vh;
+  height: 95vh;
   position: relative;
   font-size: 2rem;
   box-shadow: 5px 10px 37px -2px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 5px 10px 37px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 10px 37px -2px rgba(0, 0, 0, 0.75); }
+  @media (max-width: 450px) {
+    .phone {
+      width: 100%;
+      height: 90vh;
+      margin-top: 0; } }
+  @media (max-width: 320px) {
+    .phone {
+      width: 100%;
+      height: 90vh;
+      margin-top: 0; } }
   .phone .phone-heading {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -187,6 +197,14 @@ body {
     -ms-flex-align: center;
     align-items: center;
     z-index: 10; }
+    @media (max-width: 450px) {
+      .phone .phone-heading {
+        width: 100%;
+        position: absolute; } }
+    @media (max-width: 320px) {
+      .phone .phone-heading {
+        width: 100%;
+        position: absolute; } }
     .phone .phone-heading .phone-utils {
       width: 10%; }
     .phone .phone-heading .contact-info {
@@ -209,6 +227,12 @@ body {
     .phone .phone-body .phone-main {
       overflow: scroll;
       height: 580px; }
+      @media (max-width: 450px) {
+        .phone .phone-body .phone-main {
+          height: 300px; } }
+      @media (max-width: 320px) {
+        .phone .phone-body .phone-main {
+          height: 200px; } }
       .phone .phone-body .phone-main .relationship-input,
       .phone .phone-body .phone-main .reason-input,
       .phone .phone-body .phone-main .tone-input,
@@ -216,7 +240,7 @@ body {
       .phone .phone-body .phone-main .final-message {
         padding: 20px;
         width: 60%;
-        margin: 40px;
+        margin: 10px 40px;
         font-size: 1.4rem;
         color: white;
         font-weight: 300;
@@ -244,10 +268,11 @@ body {
           background: #E15554;
           position: relative;
           border-radius: .4em;
-          left: 30%;
-          margin-bottom: 100px; }
+          left: 30%; }
       .phone .phone-body .phone-main .relationship-input {
         margin-top: 100px; }
+        .phone .phone-body .phone-main .relationship-input .realtionship {
+          color: black; }
   .phone .phone-footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -283,6 +308,10 @@ body {
       text-transform: uppercase;
       background-color: #E88D67; }
 
+.scroll-to-bottom {
+  margin-top: 90px;
+  display: block; }
+
 .typing-indicator {
   background-color: #E88D67;
   will-change: transform;
@@ -290,10 +319,10 @@ body {
   border-radius: 50px;
   padding: 20px;
   display: table;
-  margin: 0 auto;
+  margin: 5px auto;
   position: absolute;
   bottom: 15%;
-  right: 5%;
+  right: 42%;
   -webkit-animation: 2s bulge infinite ease-out;
   animation: 2s bulge infinite ease-out; }
   .typing-indicator span {

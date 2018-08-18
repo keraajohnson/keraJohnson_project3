@@ -1,20 +1,21 @@
 .phone {
-    // background: red;
     width: 40%;
     margin: 0 auto;
-    border: 1px solid black;
+    margin-top: 25px;
     height: 90vh;
     position: relative;
-    // overflow: scroll;
     font-size: 2rem;
+    box-shadow: 5px 10px 37px -2px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 10px 37px -2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 10px 37px -2px rgba(0,0,0,0.75);
         .phone-heading {
             @include display-flex;
-            font-size: 2.2rem;
-            width: calc(40% - 2px);
-            background-color: rgba(255,255,255,0.97);
+            font-size: 3rem;
+            width: 40%;
+            background-color: rgba(161, 193, 129, 0.8);
             position: fixed;
-            padding: 20px 20px 10px 20px;
-            border-bottom: 0.5px solid $grey;
+            padding: 20px;
+            // border-bottom: 0.5px solid $grey;
             align-items: center;
             z-index: 10;
                 .phone-utils {
@@ -38,30 +39,39 @@
         }
         .phone-body {
             background: $white;
-            padding-top: 100px;
+            // padding-top: 100px;
             height: 100%;
                 .phone-main {
                     overflow: scroll;
-                    height: 460px;
+                    height: 580px;
                     .relationship-input,
                     .reason-input,
                     .tone-input,
                     .person-input, 
                     .final-message 
                      {
+                        padding: 20px;
                         width: 60%;
-                        margin: 30px;
+                        margin: 40px;
+                        @include white-font(1.4rem);
                             &.hide {
                                  display: none;
                             }
                             &.speech-bubble {
                                  position: relative; 
-                                 background: #0096ff; 
+                                 background: $iphoneMessage; 
                                  border-radius: .4em; 
+                            }
+                            &.speech-bubble-final {
+                                background: #E15554;
+                                position: relative;
+                                border-radius: .4em;
+                                left: 30%;
+                                margin-bottom: 100px 
                             }
                     }
                     .relationship-input {
-
+                        margin-top: 100px
                     }
                     .reason-input {
 
@@ -77,26 +87,77 @@
         .phone-footer {
             @include display-flex;
             justify-content: space-between;
+            position: absolute;
             width: 100%;
             bottom: 0;
-            height: 10vh;
-            background-color: red;
+            height: 12vh;
+            padding: 20px;
+            background-color:rgba(161, 193, 129, 0.8);
                 .person-text-field {
                     width: 100%;
                     .who-question {
                         width: 100%;
                             .who-bail {
-                                width: 90%;
-                                margin: 10px;
+                                width: 95%;
                                 padding: 10px 0 10px 0;
+                                border: 3px solid $borderColor;
                             }
                     }
                 } 
                 .submit-button-section {
                    .submit-button {
+                       @include white-font(1rem);
+                       font-weight: 400;
                        border: none;
+                       border-radius: 50%;
+                       width: 50px;
+                       height: 50px;                           
+                       text-transform: uppercase;
+                       background-color: $iphoneMessage; 
                    } 
                 }   
             
         }
+}
+
+.typing-indicator {
+ 
+  background-color: #E88D67;
+  will-change: transform;
+  width: auto;
+  border-radius: 50px;
+  padding: 20px;
+  display: table;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+  animation: 2s bulge infinite ease-out; 
+  span { 
+    height: 15px;
+    width: 15px;
+    float: left;
+    margin: 0 1px;
+    background-color: white;
+    display: block;
+    border-radius: 50%;
+    opacity: 0.4;
+    @for $i from 1 through 3 {
+      &:nth-of-type(#{$i}) {
+        animation: 1s blink infinite ($i * .3333s);
+      }
+    }
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes bulge {
+  50% {
+    transform: scale(1.05);
+  }
 }

@@ -274,9 +274,30 @@ myApp.changeHeader = function () {
 
 myApp.textDisappear = function () {
     $('input').on('click', function (){
-        $(this).parents().next('section').removeClass('hide');
+        const getParents = $(this).parents();
+        
+        function hideDots() {
+            $('.typing-indicator').removeClass('hide-dots');
+            setTimeout(showDots, 1000);
+        };
+
+        hideDots();
+
+        function showDots() {
+            $('.typing-indicator').addClass('hide-dots');
+            getParents.next('section').removeClass('hide');
+            myApp.updateScroll(); 
+        }     
+      
     });
+}  
+
+myApp.updateScroll = function () {
+    var element = document.getElementById("phone-main");
+    element.scrollTop = element.scrollHeight;
+    console.log(element.scrollHeight);
 }
+
 
 myApp.submitChoice = function () {
     $('form').on('submit', function (e) {
@@ -298,6 +319,8 @@ myApp.submitChoice = function () {
         // console.log(secondFilteredArray);
         myApp.finalFilteredArray = myApp.secondFilteredArray.filter(message => message.tone === myApp.userToneChoice);
         console.log(myApp.finalFilteredArray);
+
+        $('.final-message').removeClass('hide');
 
         $('.your-excuse').html(`<p>${myApp.finalFilteredArray[0].message(myApp.personName)}</p>`);
 

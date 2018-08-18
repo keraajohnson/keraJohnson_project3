@@ -152,26 +152,37 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   margin: 0 auto; }
 
 html {
-  font-size: 62.5%;
-  font-family: 'Roboto', sans-serif; }
+  font-size: 62.5%; }
+
+body {
+  background-color: #233D4D; }
+
+.icon {
+  color: white; }
+
+.hide-dots {
+  visibility: hidden;
+  opacity: 0; }
 
 .phone {
   width: 40%;
   margin: 0 auto;
-  border: 1px solid black;
+  margin-top: 25px;
   height: 90vh;
   position: relative;
-  font-size: 2rem; }
+  font-size: 2rem;
+  box-shadow: 5px 10px 37px -2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 10px 37px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 10px 37px -2px rgba(0, 0, 0, 0.75); }
   .phone .phone-heading {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 2.2rem;
-    width: calc(40% - 2px);
-    background-color: rgba(255, 255, 255, 0.97);
+    font-size: 3rem;
+    width: 40%;
+    background-color: rgba(161, 193, 129, 0.8);
     position: fixed;
-    padding: 20px 20px 10px 20px;
-    border-bottom: 0.5px solid #C0C0C0;
+    padding: 20px;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -194,18 +205,23 @@ html {
         padding: 10px; }
   .phone .phone-body {
     background: #ffffff;
-    padding-top: 100px;
     height: 100%; }
     .phone .phone-body .phone-main {
       overflow: scroll;
-      height: 460px; }
+      height: 580px; }
       .phone .phone-body .phone-main .relationship-input,
       .phone .phone-body .phone-main .reason-input,
       .phone .phone-body .phone-main .tone-input,
       .phone .phone-body .phone-main .person-input,
       .phone .phone-body .phone-main .final-message {
+        padding: 20px;
         width: 60%;
-        margin: 30px; }
+        margin: 40px;
+        font-size: 1.4rem;
+        color: white;
+        font-weight: 300;
+        letter-spacing: 2.7px;
+        line-height: 25px; }
         .phone .phone-body .phone-main .relationship-input.hide,
         .phone .phone-body .phone-main .reason-input.hide,
         .phone .phone-body .phone-main .tone-input.hide,
@@ -218,8 +234,20 @@ html {
         .phone .phone-body .phone-main .person-input.speech-bubble,
         .phone .phone-body .phone-main .final-message.speech-bubble {
           position: relative;
-          background: #0096ff;
+          background: #E88D67;
           border-radius: .4em; }
+        .phone .phone-body .phone-main .relationship-input.speech-bubble-final,
+        .phone .phone-body .phone-main .reason-input.speech-bubble-final,
+        .phone .phone-body .phone-main .tone-input.speech-bubble-final,
+        .phone .phone-body .phone-main .person-input.speech-bubble-final,
+        .phone .phone-body .phone-main .final-message.speech-bubble-final {
+          background: #E15554;
+          position: relative;
+          border-radius: .4em;
+          left: 30%;
+          margin-bottom: 100px; }
+      .phone .phone-body .phone-main .relationship-input {
+        margin-top: 100px; }
   .phone .phone-footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -227,17 +255,80 @@ html {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    position: absolute;
     width: 100%;
     bottom: 0;
-    height: 10vh;
-    background-color: red; }
+    height: 12vh;
+    padding: 20px;
+    background-color: rgba(161, 193, 129, 0.8); }
     .phone .phone-footer .person-text-field {
       width: 100%; }
       .phone .phone-footer .person-text-field .who-question {
         width: 100%; }
         .phone .phone-footer .person-text-field .who-question .who-bail {
-          width: 90%;
-          margin: 10px;
-          padding: 10px 0 10px 0; }
+          width: 95%;
+          padding: 10px 0 10px 0;
+          border: 3px solid #A1C181; }
     .phone .phone-footer .submit-button-section .submit-button {
-      border: none; }
+      font-size: 1rem;
+      color: white;
+      font-weight: 300;
+      letter-spacing: 2.7px;
+      line-height: 25px;
+      font-weight: 400;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      text-transform: uppercase;
+      background-color: #E88D67; }
+
+.typing-indicator {
+  background-color: #E88D67;
+  will-change: transform;
+  width: auto;
+  border-radius: 50px;
+  padding: 20px;
+  display: table;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 15%;
+  right: 5%;
+  -webkit-animation: 2s bulge infinite ease-out;
+  animation: 2s bulge infinite ease-out; }
+  .typing-indicator span {
+    height: 15px;
+    width: 15px;
+    float: left;
+    margin: 0 1px;
+    background-color: white;
+    display: block;
+    border-radius: 50%;
+    opacity: 0.4; }
+    .typing-indicator span:nth-of-type(1) {
+      -webkit-animation: 1s blink infinite 0.3333s;
+      animation: 1s blink infinite 0.3333s; }
+    .typing-indicator span:nth-of-type(2) {
+      -webkit-animation: 1s blink infinite 0.6666s;
+      animation: 1s blink infinite 0.6666s; }
+    .typing-indicator span:nth-of-type(3) {
+      -webkit-animation: 1s blink infinite 0.9999s;
+      animation: 1s blink infinite 0.9999s; }
+
+@-webkit-keyframes blink {
+  50% {
+    opacity: 1; } }
+
+@keyframes blink {
+  50% {
+    opacity: 1; } }
+
+@-webkit-keyframes bulge {
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); } }
+
+@keyframes bulge {
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); } }

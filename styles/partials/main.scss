@@ -6,8 +6,10 @@
     position: relative;
     font-size: 2rem;
     box-shadow: 5px 10px 37px -2px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 5px 10px 37px -2px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 10px 37px -2px rgba(0,0,0,0.75);
+    // small-desktop break-point
+    @include break-point(small-desktop) {
+        width: 70%;
+    }
     @include break-point(big-phone) {
         width: 100%;
         height: 90vh;
@@ -21,19 +23,23 @@
     }
         .phone-heading {
             @include display-flex;
-            font-size: 3rem;
+            font-size: 3.3rem;
             width: 40%;
-            background-color: rgba(161, 193, 129, 0.8);
+            background-color: $phone;
             position: fixed;
             padding: 20px;
             align-items: center;
             z-index: 10;
-            // medium break-point
+             // small-desktop break-point
+             @include break-point(small-desktop) {
+                width: 70%;
+            }
+            // big-phone break-point
             @include break-point(big-phone) {
                 width: 100%;
                 position: absolute;
             }
-            // small break-point
+            // small-phone break-point
             @include break-point(small-phone) {
                 width: 100%;
                 position: absolute;
@@ -64,12 +70,6 @@
                 .phone-main {
                     overflow: scroll;
                     height: 580px;
-                    @include break-point(big-phone) {
-                        height: 300px;
-                    }
-                    @include break-point(small-phone) {
-                        height: 200px;
-                    }
                     .relationship-input,
                     .reason-input,
                     .tone-input,
@@ -79,17 +79,32 @@
                         padding: 20px;
                         width: 60%;
                         margin:  10px 40px;
-                        @include white-font(1.4rem);
+                        @include white-font(1.5rem);
+                            label[for="who-are-they"] {
+                                @include label-font;
+                                transition: 1s all ease;
+                                    &:hover {
+                                        color: #212d40;
+                                    }
+                            }
+                            label[for="why-bail"],
+                            label[for="tone"] {
+                                @include label-font-block;
+                                transition: 1s all ease;
+                                    &:hover {
+                                       color: #212d40;
+                                    }
+                            }
                             &.hide {
                                  display: none;
                             }
                             &.speech-bubble {
                                  position: relative; 
-                                 background: $iphoneMessage; 
+                                 background: $message; 
                                  border-radius: .4em; 
                             }
                             &.speech-bubble-final {
-                                background: #E15554;
+                                background: $final;
                                 position: relative;
                                 border-radius: .4em;
                                 left: 30%;
@@ -97,20 +112,9 @@
                     }
                     .relationship-input {
                         margin-top: 100px;
-                            .realtionship {
-                                color: black;
-                            }
-                    }
-                    .reason-input {
-        
-                    }
-                    .tone-input {
-                
-            
-                    }
-                    .person-input {
 
                     }
+                 
                 }       
         }
         .phone-footer {
@@ -121,7 +125,7 @@
             bottom: 0;
             height: 12vh;
             padding: 20px;
-            background-color:rgba(161, 193, 129, 0.8);
+            background-color: $phone;
                 .person-text-field {
                     width: 100%;
                     .who-question {
@@ -142,7 +146,7 @@
                        width: 50px;
                        height: 50px;                           
                        text-transform: uppercase;
-                       background-color: $iphoneMessage; 
+                       background-color: $message; 
                    } 
                 }   
             
@@ -150,7 +154,7 @@
 }
 
 .scroll-to-bottom {
-    margin-top: 90px;
+    margin-top: 75px;
     display: block;
 }
 
@@ -162,9 +166,8 @@
   padding: 20px;
   display: table;
   margin: 5px auto;
-//   margin-top: 60px;
   position: absolute;
-  bottom:15%;
+  bottom:13.5%;
   right: 42%;
   animation: 2s bulge infinite ease-out; 
   span { 
@@ -196,16 +199,10 @@
   }
 }
 
+input[type="radio"]{
+  display: none;
+}
 
-// // input[type="radio"]{
-// //   display: none;
-// // }
-
-// input[type="radio"] + label{
-//   background-color: purple;
-//   padding: 10px;
-//   letter-spacing: 1px;
-// }
 
 // input[type="radio"]:checked + label{
 //   background-color: darkgreen;

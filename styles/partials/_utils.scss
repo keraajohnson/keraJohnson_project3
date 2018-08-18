@@ -16,21 +16,17 @@
  border: 0; 
 }
 
-.wrapper {
-    max-width: 1080px;
-    width: 80%;
-    margin: 0 auto;
-}
-
 html {
   font-size: 62.5%;
 }
 
 body {
-  background-color: #233D4D;
-  ;
+  background-color: rgba(33, 45, 64, 0.9);
 }
 
+li {
+  list-style: none;
+}
 .icon {
   color: white;
 }
@@ -41,10 +37,9 @@ body {
 }
 
 // Variables
-$iphoneMessage: #E88D67;
-// $bodyColor: red;
-$black: #000000;
-$grey: #C0C0C0;
+$phone: rgba(105, 153, 93, 0.8);
+$message: rgba(241, 143, 1, 0.7);
+$final: rgba(225, 85, 84, 0.8);
 $white: #ffffff;
 $borderColor:  #A1C181;
 
@@ -56,16 +51,39 @@ $borderColor:  #A1C181;
 
 @mixin white-font($font-size) {
   font-size: $font-size;
-  color: white;
+  color: $white;
   font-weight: 300;
   letter-spacing: 2.7px;
   line-height: 25px;
 }
 
+@mixin label-font {
+  font-size: 1.7rem;
+  padding: 7px;
+  color: $white;
+  font-weight: 300;
+  letter-spacing: 2.7px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
+@mixin label-font-block {
+  font-size: 1.6rem;
+  text-align: center;
+  display: block;
+  color: $white;
+  padding: 7px 0;
+  margin: 10px 0;
+  font-weight: 300;
+  letter-spacing: 2.7px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+
 // Breakpoint Mixins 
 
 @mixin break-point($point) {
-  @if $point == desktop {
+  @if $point == small-desktop {
     @media (max-width: 940px) { @content; }
   }
   @else if $point == tablet {

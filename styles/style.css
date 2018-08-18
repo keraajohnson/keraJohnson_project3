@@ -190,7 +190,7 @@ li {
     display: flex;
     font-size: 3.3rem;
     width: 40%;
-    background-color: rgba(105, 153, 93, 0.8);
+    background-color: rgba(105, 153, 93, 0.97);
     position: fixed;
     padding: 20px;
     -webkit-box-align: center;
@@ -335,7 +335,7 @@ li {
     bottom: 0;
     height: 12vh;
     padding: 20px;
-    background-color: rgba(105, 153, 93, 0.8); }
+    background-color: rgba(105, 153, 93, 0.97); }
     .phone .phone-footer .person-text-field {
       width: 100%; }
       .phone .phone-footer .person-text-field .who-question {

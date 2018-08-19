@@ -18,6 +18,11 @@
             max-width: 1080px;
             margin: 0 auto;
         }
+        .sorry {
+            color: #d33f49;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
         h1 {
             @include header-font(12rem);  
             // small-desktop break-point
@@ -35,7 +40,7 @@
                 margin-bottom: 20px;
             }
             @include break-point(small-phone) {
-                @include header-font(3rem);
+                @include header-font(2.6rem);
                 margin-bottom: 10px;
             }
         }

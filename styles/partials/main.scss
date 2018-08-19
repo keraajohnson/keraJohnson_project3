@@ -10,6 +10,9 @@
     @include break-point(small-desktop) {
         width: 80%;
     }
+    @include break-point(tablet) {
+        width: 90%;
+    }
     // big-phone break-point
     @include break-point(big-phone) {
         width: 100%;
@@ -87,6 +90,10 @@
                         @include break-point(big-phone) {
                             width: 85%;
                             margin: 20px 15px;
+                        }
+                        @include break-point(small-phone) {
+                            width: 95%;
+                            margin: 15px 10px;
                         }
                         @include white-font(1.5rem);
                             label[for="friend"],

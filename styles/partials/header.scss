@@ -61,6 +61,7 @@
             // small-phone break-point
             @include break-point(small-phone) {
                 font-size: 1.2rem;
+                line-height: 25px;
             }
         }
         .start {
@@ -87,7 +88,7 @@
             }
             // small-phone break-point
             @include break-point(small-phone) {
-                margin-top: 7px;
+                margin-top: 5px;
                 font-size: 1.3rem;
                 padding: 10px;
             }

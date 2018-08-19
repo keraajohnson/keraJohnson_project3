@@ -253,7 +253,8 @@ li {
         line-height: 32px; } }
     @media (max-width: 320px) {
       .header p {
-        font-size: 1.2rem; } }
+        font-size: 1.2rem;
+        line-height: 25px; } }
   .header .start {
     font-family: 'Karla', sans-serif;
     background: white;
@@ -278,7 +279,7 @@ li {
         letter-spacing: 1px; } }
     @media (max-width: 320px) {
       .header .start {
-        margin-top: 7px;
+        margin-top: 5px;
         font-size: 1.3rem;
         padding: 10px; } }
     .header .start:hover {
@@ -302,6 +303,9 @@ li {
   @media (max-width: 940px) {
     .phone {
       width: 80%; } }
+  @media (max-width: 768px) {
+    .phone {
+      width: 90%; } }
   @media (max-width: 450px) {
     .phone {
       width: 100%;
@@ -382,6 +386,14 @@ li {
           .phone .phone-body .phone-main .final-message {
             width: 85%;
             margin: 20px 15px; } }
+        @media (max-width: 320px) {
+          .phone .phone-body .phone-main .relationship-input,
+          .phone .phone-body .phone-main .reason-input,
+          .phone .phone-body .phone-main .tone-input,
+          .phone .phone-body .phone-main .person-input,
+          .phone .phone-body .phone-main .final-message {
+            width: 95%;
+            margin: 15px 10px; } }
         .phone .phone-body .phone-main .relationship-input label[for="friend"],
         .phone .phone-body .phone-main .relationship-input label[for="family"],
         .phone .phone-body .phone-main .relationship-input label[for="partner"],

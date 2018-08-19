@@ -41,6 +41,7 @@ $phone: rgba(105, 153, 93, 0.97);
 $message: rgba(241, 143, 1, 0.7);
 $final: rgba(225, 85, 84, 0.8);
 $white: #ffffff;
+$black: #000000;
 $borderColor:  #A1C181;
 
 // Style Mixins
@@ -49,9 +50,43 @@ $borderColor:  #A1C181;
   display: flex;
 }
 
+@mixin header-font($font-size) {
+    font-size: $font-size;
+    font-family: 'Karla', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow:1px 1px 1px $message,
+                2px 2px 1px $message,
+                3px 3px 1px $message,
+                4px 4px 1px $message,
+                5px 5px 1px $message,
+                6px 6px 1px $message,
+                7px 7px 1px $message,
+                8px 8px 1px $message,
+                9px 9px 1px $final,
+                10px 10px 1px $final,
+                11px 11px 1px $final,
+                12px 12px 1px $final,
+                13px 13px 1px $final,
+                14px 14px 1px $final,
+                15px 15px 1px $final,
+                16px 16px 1px $final,
+                17px 17px 1px $final,
+                18px 18px 1px $final;  
+}
+
 @mixin white-font($font-size) {
   font-size: $font-size;
   color: $white;
+  font-weight: 300;
+  letter-spacing: 2.7px;
+  line-height: 25px;
+}
+
+@mixin dark-font($font-size) {
+  font-size: $font-size;
+  color:$black;
   font-weight: 300;
   letter-spacing: 2.7px;
   line-height: 25px;

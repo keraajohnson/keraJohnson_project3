@@ -162,18 +162,84 @@ li {
   visibility: hidden;
   opacity: 0; }
 
+.header {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: #212d40;
+  z-index: 20;
+  padding: 1px;
+  -webkit-transition: 1s all ease;
+  -o-transition: 1s all ease;
+  transition: 1s all ease; }
+  .header .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    max-width: 1080px;
+    margin: 0 auto; }
+  .header h1 {
+    font-size: 12rem;
+    font-family: 'Karla', sans-serif;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(241, 143, 1, 0.7), 2px 2px 1px rgba(241, 143, 1, 0.7), 3px 3px 1px rgba(241, 143, 1, 0.7), 4px 4px 1px rgba(241, 143, 1, 0.7), 5px 5px 1px rgba(241, 143, 1, 0.7), 6px 6px 1px rgba(241, 143, 1, 0.7), 7px 7px 1px rgba(241, 143, 1, 0.7), 8px 8px 1px rgba(241, 143, 1, 0.7), 9px 9px 1px rgba(225, 85, 84, 0.8), 10px 10px 1px rgba(225, 85, 84, 0.8), 11px 11px 1px rgba(225, 85, 84, 0.8), 12px 12px 1px rgba(225, 85, 84, 0.8), 13px 13px 1px rgba(225, 85, 84, 0.8), 14px 14px 1px rgba(225, 85, 84, 0.8), 15px 15px 1px rgba(225, 85, 84, 0.8), 16px 16px 1px rgba(225, 85, 84, 0.8), 17px 17px 1px rgba(225, 85, 84, 0.8), 18px 18px 1px rgba(225, 85, 84, 0.8); }
+  .header p {
+    font-family: 'Karla', sans-serif;
+    color: white;
+    line-height: 45px;
+    font-size: 3rem;
+    text-align: center;
+    margin: 10px 0; }
+  .header .start {
+    font-family: 'Karla', sans-serif;
+    background: white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 20px 0;
+    border-radius: 100px;
+    border: none;
+    padding: 15px;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease; }
+    .header .start:hover {
+      background: rgba(225, 85, 84, 0.8); }
+
+.display-none {
+  display: none;
+  -webkit-transition: 1s all ease;
+  -o-transition: 1s all ease;
+  transition: 1s all ease; }
+
 .phone {
   width: 40%;
   margin: 0 auto;
-  margin-top: 25px;
-  height: 95vh;
+  margin-top: 7px;
+  height: 98vh;
   position: relative;
   font-size: 2rem;
   -webkit-box-shadow: 5px 10px 37px -2px rgba(0, 0, 0, 0.75);
   box-shadow: 5px 10px 37px -2px rgba(0, 0, 0, 0.75); }
   @media (max-width: 940px) {
     .phone {
-      width: 70%; } }
+      width: 80%; } }
   @media (max-width: 450px) {
     .phone {
       width: 100%;
@@ -189,9 +255,12 @@ li {
     display: -ms-flexbox;
     display: flex;
     font-size: 3.3rem;
-    width: 40%;
+    width: 100%;
     background-color: rgba(105, 153, 93, 0.97);
-    position: fixed;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
     padding: 20px;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -199,7 +268,7 @@ li {
     z-index: 10; }
     @media (max-width: 940px) {
       .phone .phone-heading {
-        width: 70%; } }
+        width: 100%; } }
     @media (max-width: 450px) {
       .phone .phone-heading {
         width: 100%;
@@ -243,11 +312,21 @@ li {
         font-weight: 300;
         letter-spacing: 2.7px;
         line-height: 25px; }
-        .phone .phone-body .phone-main .relationship-input label[for="who-are-they"],
-        .phone .phone-body .phone-main .reason-input label[for="who-are-they"],
-        .phone .phone-body .phone-main .tone-input label[for="who-are-they"],
-        .phone .phone-body .phone-main .person-input label[for="who-are-they"],
-        .phone .phone-body .phone-main .final-message label[for="who-are-they"] {
+        .phone .phone-body .phone-main .relationship-input label[for="friend"],
+        .phone .phone-body .phone-main .relationship-input label[for="family"],
+        .phone .phone-body .phone-main .relationship-input label[for="partner"],
+        .phone .phone-body .phone-main .reason-input label[for="friend"],
+        .phone .phone-body .phone-main .reason-input label[for="family"],
+        .phone .phone-body .phone-main .reason-input label[for="partner"],
+        .phone .phone-body .phone-main .tone-input label[for="friend"],
+        .phone .phone-body .phone-main .tone-input label[for="family"],
+        .phone .phone-body .phone-main .tone-input label[for="partner"],
+        .phone .phone-body .phone-main .person-input label[for="friend"],
+        .phone .phone-body .phone-main .person-input label[for="family"],
+        .phone .phone-body .phone-main .person-input label[for="partner"],
+        .phone .phone-body .phone-main .final-message label[for="friend"],
+        .phone .phone-body .phone-main .final-message label[for="family"],
+        .phone .phone-body .phone-main .final-message label[for="partner"] {
           font-size: 1.7rem;
           padding: 7px;
           color: #ffffff;
@@ -258,22 +337,62 @@ li {
           -webkit-transition: 1s all ease;
           -o-transition: 1s all ease;
           transition: 1s all ease; }
-          .phone .phone-body .phone-main .relationship-input label[for="who-are-they"]:hover,
-          .phone .phone-body .phone-main .reason-input label[for="who-are-they"]:hover,
-          .phone .phone-body .phone-main .tone-input label[for="who-are-they"]:hover,
-          .phone .phone-body .phone-main .person-input label[for="who-are-they"]:hover,
-          .phone .phone-body .phone-main .final-message label[for="who-are-they"]:hover {
+          .phone .phone-body .phone-main .relationship-input label[for="friend"]:hover,
+          .phone .phone-body .phone-main .relationship-input label[for="family"]:hover,
+          .phone .phone-body .phone-main .relationship-input label[for="partner"]:hover,
+          .phone .phone-body .phone-main .reason-input label[for="friend"]:hover,
+          .phone .phone-body .phone-main .reason-input label[for="family"]:hover,
+          .phone .phone-body .phone-main .reason-input label[for="partner"]:hover,
+          .phone .phone-body .phone-main .tone-input label[for="friend"]:hover,
+          .phone .phone-body .phone-main .tone-input label[for="family"]:hover,
+          .phone .phone-body .phone-main .tone-input label[for="partner"]:hover,
+          .phone .phone-body .phone-main .person-input label[for="friend"]:hover,
+          .phone .phone-body .phone-main .person-input label[for="family"]:hover,
+          .phone .phone-body .phone-main .person-input label[for="partner"]:hover,
+          .phone .phone-body .phone-main .final-message label[for="friend"]:hover,
+          .phone .phone-body .phone-main .final-message label[for="family"]:hover,
+          .phone .phone-body .phone-main .final-message label[for="partner"]:hover {
             color: #212d40; }
-        .phone .phone-body .phone-main .relationship-input label[for="why-bail"],
-        .phone .phone-body .phone-main .relationship-input label[for="tone"],
-        .phone .phone-body .phone-main .reason-input label[for="why-bail"],
-        .phone .phone-body .phone-main .reason-input label[for="tone"],
-        .phone .phone-body .phone-main .tone-input label[for="why-bail"],
-        .phone .phone-body .phone-main .tone-input label[for="tone"],
-        .phone .phone-body .phone-main .person-input label[for="why-bail"],
-        .phone .phone-body .phone-main .person-input label[for="tone"],
-        .phone .phone-body .phone-main .final-message label[for="why-bail"],
-        .phone .phone-body .phone-main .final-message label[for="tone"] {
+        .phone .phone-body .phone-main .relationship-input label[for="really-hot"],
+        .phone .phone-body .phone-main .relationship-input label[for="better-offer"],
+        .phone .phone-body .phone-main .relationship-input label[for="called-back"],
+        .phone .phone-body .phone-main .relationship-input label[for="dog-roll"],
+        .phone .phone-body .phone-main .relationship-input label[for="nap-recover"],
+        .phone .phone-body .phone-main .relationship-input label[for="actual-excuse"],
+        .phone .phone-body .phone-main .relationship-input label[for="friendship-over"],
+        .phone .phone-body .phone-main .relationship-input label[for="friends-still"],
+        .phone .phone-body .phone-main .reason-input label[for="really-hot"],
+        .phone .phone-body .phone-main .reason-input label[for="better-offer"],
+        .phone .phone-body .phone-main .reason-input label[for="called-back"],
+        .phone .phone-body .phone-main .reason-input label[for="dog-roll"],
+        .phone .phone-body .phone-main .reason-input label[for="nap-recover"],
+        .phone .phone-body .phone-main .reason-input label[for="actual-excuse"],
+        .phone .phone-body .phone-main .reason-input label[for="friendship-over"],
+        .phone .phone-body .phone-main .reason-input label[for="friends-still"],
+        .phone .phone-body .phone-main .tone-input label[for="really-hot"],
+        .phone .phone-body .phone-main .tone-input label[for="better-offer"],
+        .phone .phone-body .phone-main .tone-input label[for="called-back"],
+        .phone .phone-body .phone-main .tone-input label[for="dog-roll"],
+        .phone .phone-body .phone-main .tone-input label[for="nap-recover"],
+        .phone .phone-body .phone-main .tone-input label[for="actual-excuse"],
+        .phone .phone-body .phone-main .tone-input label[for="friendship-over"],
+        .phone .phone-body .phone-main .tone-input label[for="friends-still"],
+        .phone .phone-body .phone-main .person-input label[for="really-hot"],
+        .phone .phone-body .phone-main .person-input label[for="better-offer"],
+        .phone .phone-body .phone-main .person-input label[for="called-back"],
+        .phone .phone-body .phone-main .person-input label[for="dog-roll"],
+        .phone .phone-body .phone-main .person-input label[for="nap-recover"],
+        .phone .phone-body .phone-main .person-input label[for="actual-excuse"],
+        .phone .phone-body .phone-main .person-input label[for="friendship-over"],
+        .phone .phone-body .phone-main .person-input label[for="friends-still"],
+        .phone .phone-body .phone-main .final-message label[for="really-hot"],
+        .phone .phone-body .phone-main .final-message label[for="better-offer"],
+        .phone .phone-body .phone-main .final-message label[for="called-back"],
+        .phone .phone-body .phone-main .final-message label[for="dog-roll"],
+        .phone .phone-body .phone-main .final-message label[for="nap-recover"],
+        .phone .phone-body .phone-main .final-message label[for="actual-excuse"],
+        .phone .phone-body .phone-main .final-message label[for="friendship-over"],
+        .phone .phone-body .phone-main .final-message label[for="friends-still"] {
           font-size: 1.6rem;
           text-align: center;
           display: block;
@@ -287,16 +406,46 @@ li {
           -webkit-transition: 1s all ease;
           -o-transition: 1s all ease;
           transition: 1s all ease; }
-          .phone .phone-body .phone-main .relationship-input label[for="why-bail"]:hover,
-          .phone .phone-body .phone-main .relationship-input label[for="tone"]:hover,
-          .phone .phone-body .phone-main .reason-input label[for="why-bail"]:hover,
-          .phone .phone-body .phone-main .reason-input label[for="tone"]:hover,
-          .phone .phone-body .phone-main .tone-input label[for="why-bail"]:hover,
-          .phone .phone-body .phone-main .tone-input label[for="tone"]:hover,
-          .phone .phone-body .phone-main .person-input label[for="why-bail"]:hover,
-          .phone .phone-body .phone-main .person-input label[for="tone"]:hover,
-          .phone .phone-body .phone-main .final-message label[for="why-bail"]:hover,
-          .phone .phone-body .phone-main .final-message label[for="tone"]:hover {
+          .phone .phone-body .phone-main .relationship-input label[for="really-hot"]:hover,
+          .phone .phone-body .phone-main .relationship-input label[for="better-offer"]:hover,
+          .phone .phone-body .phone-main .relationship-input label[for="called-back"]:hover,
+          .phone .phone-body .phone-main .relationship-input label[for="dog-roll"]:hover,
+          .phone .phone-body .phone-main .relationship-input label[for="nap-recover"]:hover,
+          .phone .phone-body .phone-main .relationship-input label[for="actual-excuse"]:hover,
+          .phone .phone-body .phone-main .relationship-input label[for="friendship-over"]:hover,
+          .phone .phone-body .phone-main .relationship-input label[for="friends-still"]:hover,
+          .phone .phone-body .phone-main .reason-input label[for="really-hot"]:hover,
+          .phone .phone-body .phone-main .reason-input label[for="better-offer"]:hover,
+          .phone .phone-body .phone-main .reason-input label[for="called-back"]:hover,
+          .phone .phone-body .phone-main .reason-input label[for="dog-roll"]:hover,
+          .phone .phone-body .phone-main .reason-input label[for="nap-recover"]:hover,
+          .phone .phone-body .phone-main .reason-input label[for="actual-excuse"]:hover,
+          .phone .phone-body .phone-main .reason-input label[for="friendship-over"]:hover,
+          .phone .phone-body .phone-main .reason-input label[for="friends-still"]:hover,
+          .phone .phone-body .phone-main .tone-input label[for="really-hot"]:hover,
+          .phone .phone-body .phone-main .tone-input label[for="better-offer"]:hover,
+          .phone .phone-body .phone-main .tone-input label[for="called-back"]:hover,
+          .phone .phone-body .phone-main .tone-input label[for="dog-roll"]:hover,
+          .phone .phone-body .phone-main .tone-input label[for="nap-recover"]:hover,
+          .phone .phone-body .phone-main .tone-input label[for="actual-excuse"]:hover,
+          .phone .phone-body .phone-main .tone-input label[for="friendship-over"]:hover,
+          .phone .phone-body .phone-main .tone-input label[for="friends-still"]:hover,
+          .phone .phone-body .phone-main .person-input label[for="really-hot"]:hover,
+          .phone .phone-body .phone-main .person-input label[for="better-offer"]:hover,
+          .phone .phone-body .phone-main .person-input label[for="called-back"]:hover,
+          .phone .phone-body .phone-main .person-input label[for="dog-roll"]:hover,
+          .phone .phone-body .phone-main .person-input label[for="nap-recover"]:hover,
+          .phone .phone-body .phone-main .person-input label[for="actual-excuse"]:hover,
+          .phone .phone-body .phone-main .person-input label[for="friendship-over"]:hover,
+          .phone .phone-body .phone-main .person-input label[for="friends-still"]:hover,
+          .phone .phone-body .phone-main .final-message label[for="really-hot"]:hover,
+          .phone .phone-body .phone-main .final-message label[for="better-offer"]:hover,
+          .phone .phone-body .phone-main .final-message label[for="called-back"]:hover,
+          .phone .phone-body .phone-main .final-message label[for="dog-roll"]:hover,
+          .phone .phone-body .phone-main .final-message label[for="nap-recover"]:hover,
+          .phone .phone-body .phone-main .final-message label[for="actual-excuse"]:hover,
+          .phone .phone-body .phone-main .final-message label[for="friendship-over"]:hover,
+          .phone .phone-body .phone-main .final-message label[for="friends-still"]:hover {
             color: #212d40; }
         .phone .phone-body .phone-main .relationship-input.hide,
         .phone .phone-body .phone-main .reason-input.hide,
@@ -323,76 +472,37 @@ li {
           left: 30%; }
       .phone .phone-body .phone-main .relationship-input {
         margin-top: 100px; }
-  .phone .phone-footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    height: 12vh;
-    padding: 20px;
-    background-color: rgba(105, 153, 93, 0.97); }
-    .phone .phone-footer .person-text-field {
-      width: 100%; }
-      .phone .phone-footer .person-text-field .who-question {
-        width: 100%; }
-        .phone .phone-footer .person-text-field .who-question .who-bail {
-          width: 95%;
-          padding: 10px 0 10px 0;
-          border: 3px solid #A1C181; }
-    .phone .phone-footer .submit-button-section .submit-button {
-      font-size: 1rem;
-      color: #ffffff;
-      font-weight: 300;
-      letter-spacing: 2.7px;
-      line-height: 25px;
-      font-weight: 400;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      text-transform: uppercase;
-      background-color: rgba(241, 143, 1, 0.7); }
-
-.scroll-to-bottom {
-  margin-top: 75px;
-  display: block; }
-
-.typing-indicator {
-  background-color: #E88D67;
-  will-change: transform;
-  width: auto;
-  border-radius: 50px;
-  padding: 20px;
-  display: table;
-  margin: 5px auto;
-  position: absolute;
-  bottom: 13.5%;
-  right: 42%;
-  -webkit-animation: 2s bulge infinite ease-out;
-  animation: 2s bulge infinite ease-out; }
-  .typing-indicator span {
-    height: 15px;
-    width: 15px;
-    float: left;
-    margin: 0 1px;
-    background-color: white;
-    display: block;
-    border-radius: 50%;
-    opacity: 0.4; }
-    .typing-indicator span:nth-of-type(1) {
-      -webkit-animation: 1s blink infinite 0.3333s;
-      animation: 1s blink infinite 0.3333s; }
-    .typing-indicator span:nth-of-type(2) {
-      -webkit-animation: 1s blink infinite 0.6666s;
-      animation: 1s blink infinite 0.6666s; }
-    .typing-indicator span:nth-of-type(3) {
-      -webkit-animation: 1s blink infinite 0.9999s;
-      animation: 1s blink infinite 0.9999s; }
+    .phone .phone-body .typing-indicator {
+      background-color: rgba(105, 153, 93, 0.97);
+      will-change: transform;
+      width: auto;
+      border-radius: 50px;
+      padding: 15px;
+      display: table;
+      margin: 5px auto;
+      position: absolute;
+      bottom: 12.8%;
+      right: 42%;
+      -webkit-animation: 2s bulge infinite ease-out;
+      animation: 2s bulge infinite ease-out; }
+      .phone .phone-body .typing-indicator span {
+        height: 15px;
+        width: 15px;
+        float: left;
+        margin: 0 1px;
+        background-color: white;
+        display: block;
+        border-radius: 50%;
+        opacity: 0.4; }
+        .phone .phone-body .typing-indicator span:nth-of-type(1) {
+          -webkit-animation: 1s blink infinite 0.3333s;
+          animation: 1s blink infinite 0.3333s; }
+        .phone .phone-body .typing-indicator span:nth-of-type(2) {
+          -webkit-animation: 1s blink infinite 0.6666s;
+          animation: 1s blink infinite 0.6666s; }
+        .phone .phone-body .typing-indicator span:nth-of-type(3) {
+          -webkit-animation: 1s blink infinite 0.9999s;
+          animation: 1s blink infinite 0.9999s; }
 
 @-webkit-keyframes blink {
   50% {
@@ -411,6 +521,50 @@ li {
   50% {
     -webkit-transform: scale(1.05);
     transform: scale(1.05); } }
+  .phone .phone-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 12vh;
+    padding: 20px;
+    background-color: rgba(105, 153, 93, 0.97); }
+    .phone .phone-footer .person-text-field {
+      width: 100%; }
+      .phone .phone-footer .person-text-field .who-question {
+        width: 100%; }
+        .phone .phone-footer .person-text-field .who-question .who-bail {
+          font-size: 1.3rem;
+          color: #000000;
+          font-weight: 300;
+          letter-spacing: 2.7px;
+          line-height: 25px;
+          text-transform: uppercase;
+          width: 95%;
+          padding: 10px 0px 10px 18px;
+          border: 3px solid #A1C181; }
+    .phone .phone-footer .submit-button-section .submit-button {
+      font-size: 1rem;
+      color: #ffffff;
+      font-weight: 300;
+      letter-spacing: 2.7px;
+      line-height: 25px;
+      font-weight: 400;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      text-transform: uppercase;
+      background-color: rgba(241, 143, 1, 0.7); }
+
+.scroll-to-bottom {
+  margin-top: 40px;
+  display: block; }
 
 input[type="radio"] {
   display: none; }

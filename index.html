@@ -6,11 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
         crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla|Quicksand:300,400" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
     <title></title>
 </head>
 <body>
+    <header class="header">
+        <div class="wrapper">
+            <h1>Sorry Not Sorry</h1>
+            <p>We all have that friend, family or future ex partner that we just can't commit to. You know the one, the one you text after a few drinks, thinking to yourself "they aren't that bad". But in reality they are that bad, and you've already committed your Friday night! You can't just use the same old "Sorry, I have to work late" because first of all, you aren't sorry and secondly you don't even work. Use "Sorry Not Sorry" to send that perfect snarky text to make sure you never have to bail again. </p>
+            <button class="start">Let's Get Bailing</button>
+        </div>
+    </header>
     <main>
         <!-- 01 phone -->
         <section class="phone">
@@ -39,40 +46,42 @@
                         <!-- 4.1 relationship-input -->
                         <section class="relationship-input speech-bubble">
                             <p>I get it, you like your friends but only when you aren't tired. So, who do you want to bail on tonight?</p>
-                            <label for="who-are-they">💃BFF</label>
-                            <input type="radio" name="who-are-they" class="friend relationship" id="who-are-they" value="friend">
-                            <label for="who-are-they">👫fam</label>
-                            <input type="radio" name="who-are-they" class="family relationship" id="who-are-they" value="family">
-                            <label for="who-are-they">😍my boo</label>
-                            <input type="radio" name="who-are-they" class="partner relationship" id="who-are-they" value="partner">
+                            <label for="friend">💃BFF</label>
+                            <input type="radio" name="who-are-they" class="friend relationship" id="friend" value="friend">
+                           
+                            <label for="family">👫fam</label>
+                            <input type="radio" name="who-are-they" class="family relationship" id="family" value="family">
+                            
+                            <label for="partner">😍my boo</label>
+                            <input type="radio" name="who-are-they" class="partner relationship" id="partner" value="partner">
                         </section>
                         <!-- 4.2 reason-input -->
                         <section class="reason-input speech-bubble hide">
                             <p>Okay, so you don't want to hang out -- it's cool. Why do you want to bail?</p>
                             <ul>
                                 <li>
-                                    <label for="why-bail"> 🔥Ugh Too Hot Outside🔥</label>
-                                    <input type="radio" name="why-bail" class="really-hot" id="why-bail" value="reallyHot">
+                                    <label for="really-hot"> 🔥Ugh Too Hot Outside🔥</label>
+                                    <input type="radio" name="why-bail" class="really-hot" id="really-hot" value="reallyHot">
                                 </li>
                                 <li>
-                                    <label for="why-bail">💁‍♀️Got a better offer💁‍♀️</label>
-                                    <input type="radio" name="why-bail" class="better-offer" id="why-bail" value="betterOffer">
+                                    <label for="better-offer">💁‍♀️Got a better offer💁‍♀️</label>
+                                    <input type="radio" name="why-bail" class="better-offer" id="better-offer" value="betterOffer">
                                 </li>
                                 <li>
-                                    <label for="why-bail">🛸 Mothership called🛸</label>
-                                    <input type="radio" name="why-bail" class="called-back" id="why-bail" value="calledBack">
+                                    <label for="called-back">🛸Mothership called🛸</label>
+                                    <input type="radio" name="why-bail" class="called-back" id="called-back" value="calledBack">
                                 </li>
                                 <li>
-                                    <label for="why-bail">🐩My dog is too cute🐩</label>
-                                    <input type="radio" name="why-bail" class="dog-roll" id="why-bail" value="dogRoll">
+                                    <label for="dog-roll">🐩My dog is too cute🐩</label>
+                                    <input type="radio" name="why-bail" class="dog-roll" id="dog-roll" value="dogRoll">
                                 </li>
                                 <li>
-                                    <label for="why-bail">😴Oops I napped to hard😴</label>
-                                    <input type="radio" name="why-bail" class="nap-recover" id="why-bail" value="napRecover">
+                                    <label for="nap-recover">😴Oops I napped to hard😴</label>
+                                    <input type="radio" name="why-bail" class="nap-recover" id="nap-recover" value="napRecover">
                                 </li>
                                 <li>
-                                    <label for="why-bail">💻Working Late-ish?💻</label>
-                                    <input type="radio" name="why-bail" class="actual-excuse" id="why-bail" value="actualExcuse">
+                                    <label for="actual-excuse">👩‍💻Working Late-ish?👩‍💻</label>
+                                    <input type="radio" name="why-bail" class="actual-excuse" id="actual-excuse" value="actualExcuse">
                                 </li>
                             </ul>
                         </section>
@@ -81,12 +90,12 @@
                             <p>Cool, that's a "great" reason - so, do you want to see this person again or are you over it?</p>
                             <ul>
                                 <li>
-                                    <label for="tone">🙅‍I'm seriously over it 🙅‍♀️</label>
-                                    <input type="radio" name="tone" class="friendship-over" id="tone" value="friendshipOver">
+                                    <label for="friendship-over">🙅‍♀️I'm seriously over it🙅‍♀️</label>
+                                    <input type="radio" name="tone" class="friendship-over" id="friendship-over" value="friendshipOver">
                                 </li>
                                 <li>
-                                    <label for="tone">👭Just a one time bail👭</label>
-                                    <input type="radio" name="tone" class="friends-still" id="tone" "" value="friendsStill">
+                                    <label for="friends-still">👭I just can't today👭</label>
+                                    <input type="radio" name="tone" class="friends-still" id="friends-still" value="friendsStill">
                                 </li>
                             </ul>
                         </section>
@@ -113,7 +122,7 @@
                         <div class="person-text-field">
                             <div class="who-question">
                                 <label for="who-bail" class="visually-hidden"></label>
-                                <input type="text" name="who-bail" class="who-bail" id="who-bail" value="">
+                                <input type="text" name="who-bail" class="who-bail" id="who-bail" value="" placeholder="your text here">
                             </div>
                         </div>
                         <!-- 5.3 submit-button -->
@@ -129,6 +138,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
     <script src="scripts/scripts.js"></script>
-
 </body>
 </html>

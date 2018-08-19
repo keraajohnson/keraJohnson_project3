@@ -1,15 +1,16 @@
 .phone {
     width: 40%;
     margin: 0 auto;
-    margin-top: 25px;
-    height: 95vh;
+    margin-top: 7px;
+    height: 98vh;
     position: relative;
     font-size: 2rem;
     box-shadow: 5px 10px 37px -2px rgba(0,0,0,0.75);
     // small-desktop break-point
     @include break-point(small-desktop) {
-        width: 70%;
+        width: 80%;
     }
+    // big-phone break-point
     @include break-point(big-phone) {
         width: 100%;
         height: 90vh;
@@ -24,15 +25,18 @@
         .phone-heading {
             @include display-flex;
             font-size: 3.3rem;
-            width: 40%;
+            width: 100%;
             background-color: $phone;
-            position: fixed;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
             padding: 20px;
             align-items: center;
             z-index: 10;
              // small-desktop break-point
              @include break-point(small-desktop) {
-                width: 70%;
+                width: 100%;
             }
             // big-phone break-point
             @include break-point(big-phone) {
@@ -80,15 +84,23 @@
                         width: 60%;
                         margin:  10px 40px;
                         @include white-font(1.5rem);
-                            label[for="who-are-they"] {
+                            label[for="friend"],
+                            label[for="family"],
+                            label[for="partner"] {
                                 @include label-font;
                                 transition: 1s all ease;
                                     &:hover {
                                         color: #212d40;
                                     }
                             }
-                            label[for="why-bail"],
-                            label[for="tone"] {
+                            label[for="really-hot"],
+                            label[for="better-offer"],
+                            label[for="called-back"],
+                            label[for="dog-roll"],
+                            label[for="nap-recover"],
+                            label[for="actual-excuse"],
+                            label[for="friendship-over"],
+                            label[for="friends-still"] {
                                 @include label-font-block;
                                 transition: 1s all ease;
                                     &:hover {
@@ -114,8 +126,47 @@
                         margin-top: 100px;
 
                     }
-                 
-                }       
+                } 
+                .typing-indicator {
+                    background-color: $phone;
+                    will-change: transform;
+                    width: auto;
+                    border-radius: 50px;
+                    padding: 15px;
+                    display: table;
+                    margin: 5px auto;
+                    position: absolute;
+                    bottom:12.8%;
+                    right: 42%;
+                    animation: 2s bulge infinite ease-out; 
+                    span { 
+                        height: 15px;
+                        width: 15px;
+                        float: left;
+                        margin: 0 1px;
+                        background-color: white;
+                        display: block;
+                        border-radius: 50%;
+                        opacity: 0.4;
+                        @for $i from 1 through 3 {
+                        &:nth-of-type(#{$i}) {
+                            animation: 1s blink infinite ($i * .3333s);
+                        }
+                        }
+                    }
+                    }
+
+                    @keyframes blink {
+                    50% {
+                        opacity: 1;
+                    }
+                    }
+
+                    @keyframes bulge {
+                    50% {
+                        transform: scale(1.05);
+                    }
+                    }      
         }
         .phone-footer {
             @include display-flex;
@@ -131,8 +182,10 @@
                     .who-question {
                         width: 100%;
                             .who-bail {
+                                @include dark-font(1.3rem);
+                                text-transform: uppercase;
                                 width: 95%;
-                                padding: 10px 0 10px 0;
+                                padding: 10px 0px 10px 18px;
                                 border: 3px solid $borderColor;
                             }
                     }
@@ -154,58 +207,11 @@
 }
 
 .scroll-to-bottom {
-    margin-top: 75px;
+    margin-top: 40px;
     display: block;
-}
-
-.typing-indicator {
-  background-color: #E88D67;
-  will-change: transform;
-  width: auto;
-  border-radius: 50px;
-  padding: 20px;
-  display: table;
-  margin: 5px auto;
-  position: absolute;
-  bottom:13.5%;
-  right: 42%;
-  animation: 2s bulge infinite ease-out; 
-  span { 
-    height: 15px;
-    width: 15px;
-    float: left;
-    margin: 0 1px;
-    background-color: white;
-    display: block;
-    border-radius: 50%;
-    opacity: 0.4;
-    @for $i from 1 through 3 {
-      &:nth-of-type(#{$i}) {
-        animation: 1s blink infinite ($i * .3333s);
-      }
-    }
-  }
-}
-
-@keyframes blink {
-  50% {
-    opacity: 1;
-  }
-}
-
-@keyframes bulge {
-  50% {
-    transform: scale(1.05);
-  }
 }
 
 input[type="radio"]{
   display: none;
 }
 
-
-// input[type="radio"]:checked + label{
-//   background-color: darkgreen;
-//   color: white;
-//   transition: background-color, color .2s;
-// }

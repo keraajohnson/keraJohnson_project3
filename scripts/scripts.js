@@ -1,6 +1,7 @@
 
 const myApp = {}
 
+// array of objects which contain my values 
 myApp.messages = [
     {
         tone: 'friendshipOver',
@@ -20,8 +21,8 @@ myApp.messages = [
         tone: 'friendshipOver',
         relation: 'friend',
         why: 'calledBack',
-        message: function (personName) {
-            return `${personName} the copy for a friendshipOver just a friend called back to mothership`}
+        message: function () {
+            return `ET phone hooooooooome`}
     },
     {
         tone: 'friendshipOver',
@@ -35,49 +36,49 @@ myApp.messages = [
         relation: 'friend',
         why: 'napRecover',
         message: function (personName) {
-            return `${personName} the copy for a friendship over just a friend nap recover`}
+            return `Hey${personName}... I know that we're supposed to hang but, I just had a life altering nap.  So, I think I might just stay here, in bed, without you, maybe forever.`}
     },
     {
         tone: 'friendshipOver',
         relation: 'friend',
         why: 'actualExcuse',
         message: function (personName) {
-            return `${personName} the copy for a friendshipover just a friend actual excuse`}
+            return `${personName}, I have to work late and school is crazy and you know, life? I can't hang out with you, maybe ever again. 👋`}
     },
     {
         tone: 'friendshipOver', 
         relation: 'family', 
         why: 'reallyHot',
         message: function (personName) { 
-            return `${personName} the copy for a friendship over family member really hot`}
+            return `${personName}, I know we're family so hopefully you can forgive me, but I just can't see you tonight. Have you noticed that it's TOO hot out there? Maybe I'll see you at a family reunion or... not?`}
     },
     {
         tone: 'friendshipOver',
         relation: 'family',
         why: 'betterOffer', 
         message: function (personName) {
-            return `${personName} the copy for a friendship over family member better offer`}
+            return `${personName}, listen, I know we're bound by blood but a super cool friend just called and invited me to a super cool party... See you never?`}
     },
     {
         tone: 'friendshipOver',
         relation: 'family',
         why: 'calledBack',
         message: function (personName) {
-            return `${personName} the copy for a friendshipOver family member who got called back to the mothership`}
+            return `${personName}☟︎♓︎  ♓︎ ♍︎♋︎■︎🕯︎⧫︎ ♒︎♋︎■︎♑︎ □︎◆︎⧫︎📪︎ ♓︎ ⬥︎♓︎⬧︎♒︎ ⍓︎□︎◆︎ ⬥︎□︎◆︎●︎♎︎ ●︎♏︎♋︎❖︎♏︎ ❍︎♏︎ ♋︎●︎□︎■︎♏︎ ♌︎⍓︎♏︎`}
     },
     {
         tone: 'friendshipOver',
         relation: 'family',
         why: 'dogRoll',
         message: function (personName) {
-            return `${personName} the copy for a friendshipOver family member whos dog rolled over`}
+            return `${personName} you like dogs right? Well then I hope you understand that I can't leave my house because fido just rolled over and it's too instagram worthy to pass up. Love you fam (but please stop calling me)`}
     },
     {
         tone: 'friendshipOver',
         relation: 'family',
         why: 'napRecover',
         message: function (personName) {
-            return `${personName} the copy for a friendshipOver family member who needs to recover from a nap`} 
+            return `Hi ${personName}! Oh boy, I just had an intense nap. Can we raincheck for perhaps the early 2050's? Or like maybe at the next time some in our fam gets married? I should be recovered by then. `} 
     },
     {
         tone: 'friendshipOver',
@@ -258,6 +259,7 @@ myApp.messages = [
     }
 ]
 
+
 myApp.relationshipInfo = {
     partner: '💋',
     friend: '👯‍♀️',
@@ -288,15 +290,25 @@ myApp.textDisappear = function () {
             getParents.next('section').removeClass('hide');
             myApp.updateScroll(); 
         }   
-      
     });
 }  
 
 myApp.updateScroll = function () {
     var element = document.getElementById("phone-main");
     element.scrollTop = element.scrollHeight;
+}
 
-    console.log(element.scrollHeight)
+myApp.hideHeader = function () {
+    $('.start').on('click', function (){
+        console.log('click');
+        $('.header').addClass('display-none');
+    })
+}
+
+myApp.inputDots = function () {
+    $('.who-bail').on('click', function () {
+        $('.typing-indicator').addClass('hide-dots');
+    });
 }
 
 myApp.submitChoice = function () {
@@ -305,7 +317,6 @@ myApp.submitChoice = function () {
         e.preventDefault();
         // variable to determine what the users realtionship is 
         myApp.personName = $('input[name=who-bail]').val();
-        // myApp.personPhoneNumber = $('input[name=phone-number]').val();
         myApp.userRelationChoice = $('input[name=who-are-they]:checked').val();
         // variable to determine what the users reason why choice is 
         myApp.userWhyBailChoice = $('input[name=why-bail]:checked').val();
@@ -314,19 +325,22 @@ myApp.submitChoice = function () {
 
         // filter method to determine what object should display
         myApp.firstFilteredArray = myApp.messages.filter(message => message.relation === myApp.userRelationChoice);
-        // console.log(firstFilteredArray);
         myApp.secondFilteredArray = myApp.firstFilteredArray.filter(message => message.why === myApp.userWhyBailChoice);
-        // console.log(secondFilteredArray);
         myApp.finalFilteredArray = myApp.secondFilteredArray.filter(message => message.tone === myApp.userToneChoice);
-        console.log(myApp.finalFilteredArray);
 
-        $('.final-message').removeClass('hide');
-        $('.typing-indicator').addClass('hide-dots');
-        // myApp.updateScroll();
+        myApp.finalMsg = function () {
+            $('.final-message').removeClass('hide');
+            $('.your-excuse').append(`<p>${myApp.finalFilteredArray[0].message(myApp.personName)}</p>`);
+            myApp.updateScroll(); 
+        }   
+        
+        myApp.showFinalMsg = function () {
+            setTimeout(myApp.finalMsg, 2000);
+        }
 
-        $('.your-excuse').html(`<p>${myApp.finalFilteredArray[0].message(myApp.personName)}</p>`);
+        myApp.showFinalMsg();
 
-        $('input').val('');
+        $('.who-bail').val('');
         });
     };    
 
@@ -334,10 +348,11 @@ myApp.init = function () {
     myApp.changeHeader();
     myApp.submitChoice();
     myApp.textDisappear();
+    myApp.hideHeader();
+    myApp.inputDots();
 }
 
 $(function() {
-    myApp.init(); 
-    
+    myApp.init();   
 });
     

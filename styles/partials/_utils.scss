@@ -125,9 +125,9 @@ $borderColor:  #A1C181;
     @media (max-width: 768px) { @content; }
   }
   @else if $point == big-phone {
-    @media (max-width: 450px) { @content; }
+    @media (max-width: 414px) { @content; }
   }
   @else if $point == small-phone {
-    @media (max-width: 320px)  { @content; }
+    @media (max-width: 375px)  { @content; }
   }
 }

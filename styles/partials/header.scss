@@ -36,12 +36,12 @@
             }
             // big-phone break-point
             @include break-point(big-phone) {
-                @include header-font(3.2rem);
+                @include header-font(3.5rem);
                 margin-bottom: 20px;
             }
             @include break-point(small-phone) {
-                @include header-font(2.3rem);
-                margin-bottom: 5px;
+                @include header-font(2.7rem);
+                margin-bottom: 20px;
             }
         }
         p {
@@ -58,24 +58,22 @@
             @include break-point(tablet) {
                 font-size: 2rem;
                 line-height: 30px;
-                color: green;
             }
             // big-phone break-point
             @include break-point(big-phone) {
-                font-size: 1.6rem;
-                line-height: 22px;
-                color: blue;
+                font-size: 1.9rem;
+                line-height: 32px;
             }
             // small-phone break-point
             @include break-point(small-phone) {
-                font-size: 1.1rem;
-                line-height: 20px;
-                color: red;
+                font-size: 1.7rem;
+                line-height: 30px;
             }
         }
         .start {
             font-family: 'Karla', sans-serif;
             background: white;
+            font-weight: 700;
             font-size: 2rem;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -91,14 +89,14 @@
             // big-phone break-point
             @include break-point(big-phone) {
                 margin-top: 10px;
-                font-size: 1.5rem;
+                font-size: 1.9rem;
                 padding: 12px;
                 letter-spacing: 1px;
             }
             // small-phone break-point
             @include break-point(small-phone) {
-                margin-top: 3px;
-                font-size: 1.2rem;
+                margin-top: 10px;
+                font-size: 1.6rem;
                 padding: 8px;
             }
                 &:hover {

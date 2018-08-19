@@ -83,6 +83,11 @@
                         padding: 20px;
                         width: 60%;
                         margin:  10px 40px;
+                        // big-phone break-point
+                        @include break-point(big-phone) {
+                            width: 85%;
+                            margin: 20px 15px;
+                        }
                         @include white-font(1.5rem);
                             label[for="friend"],
                             label[for="family"],
@@ -120,6 +125,10 @@
                                 position: relative;
                                 border-radius: .4em;
                                 left: 30%;
+                                // big-iphone break-point
+                                @include break-point(big-phone) {
+                                    left: 10%;
+                                }
                             }
                     }
                     .relationship-input {
@@ -128,7 +137,11 @@
                     }
                 } 
                 .typing-indicator {
-                    background-color: $phone;
+                    // big-phone break-point
+                    @include break-point(big-phone) {
+                        display: none;
+                    }
+                    background-color: $message;
                     will-change: transform;
                     width: auto;
                     border-radius: 50px;
@@ -144,7 +157,7 @@
                         width: 15px;
                         float: left;
                         margin: 0 1px;
-                        background-color: white;
+                        background-color: $final;
                         display: block;
                         border-radius: 50%;
                         opacity: 0.4;

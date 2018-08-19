@@ -85,84 +85,84 @@ myApp.messages = [
         relation: 'family',
         why: 'actualExcuse', 
         message: function (personName) {
-            return `${personName} the copy for a friendshipOver family member who has an actual excuse `}
+            return `${personName}, listen, I've got work or school or something important - if you could just give me some space for the next 30-60 years? That would be great, bye fam 👋`}
     },
     {
         tone: 'friendshipOver',
         relation: 'partner',
         why: 'reallyHot',
         message: function (personName) {
-            return `${personName} the copy for a friendship over partner member really hot`}
+            return `Hi ${personName}, ugh babe, It's soooooo hot out. Can we reschedule for when global warming is over? Also, I want to break up 💔 `}
     },
     {
         tone: 'friendshipOver',
         relation: 'partner',
         why: 'betterOffer',
         message: function (personName) {
-            return `${personName} the copy for a friendship over partner member better offer`}
+            return `${personName}, babe, so weird but I just heard from that hottie from a few months ago. Anyway, they want to get together - so let's just call it quits for now so I can go on this hot hot date? 💔 I never really loved you.`}
     },
     {
         tone: 'friendshipOver',
         relation: 'partner',
         why: 'calledBack',
-        message: function (personName) {
-            return `${personName} the copy for a friendshipOver partner member who got called back to the mothership`}
+        message: function () {
+            return `ET PHOOOOONE ME AND WANTS TO HOOOOOOOK UP`}
     },
     {
         tone: 'friendshipOver',
         relation: 'partner',
         why: 'dogRoll',
         message: function (personName) {
-            return `${personName} the copy for a friendshipOver partner member whos dog rolled over`}
+            return `${personName}, my sweetie pie. My dog just rolled over into the most instagram worthy position (you know how important it is I break 600 followers...). Anyway, I have to cancel. Also, I want to break up 💔`}
     },
     {
         tone: 'friendshipOver',
         relation: 'partner',
         why: 'napRecover',
         message: function (personName) {
-            return `${personName} the copy for a friendshipOver partner member who needs to recover from a nap`}
+            return `${personName} hmmm, I just had the greatest nap without you. And honestly, I kind of want to have more naps without you. Like forever. So, I can't make it tonight and I want to break up 💔`}
     },
     {
         tone: 'friendshipOver',
         relation: 'partner',
         why: 'actualExcuse',
         message: function (personName) {
-            return `${personName} the copy for a friendshipOver family member who has an actual excuse`}
+            return `${personName} I've got work//school//sports? I can't make it tonight or ever. Sorry not sorry, let's break up 💔`}
     },
     {
         tone: 'friendsStill',
         relation: 'friend',
         why: 'reallyHot',
         message: function (personName) {
-            return `${personName} the copy for a friendship-over, just a friend, really-hot`}
+            return `Hi ${personName}! Ugh, so hot outside right? Can we reschedule? I sooo want to see you but it is sooooo hot.`}
     },
     {
         tone: 'friendsStill',
         relation: 'friend',
         why: 'betterOffer',
         message: function (personName) {
-            return `${personName} the copy for a friendshipOver just a friend and better offer`}
+            return `${personName}, you know how much I love you, right? Of course you do. Anyway, I just got an offer I can't pass up. Don't hate me, brunch soon?`}
     },
     {
         tone: 'friendsStill',
         relation: 'friend',
         why: 'calledBack',
         message: function (personName) {
-            return `${personName} the copy for a friendshipOver just a friend called back to mothership`}
+            return `✋︎ ♍︎♋︎■︎🕯︎⧫︎ ♒︎♋︎■︎♑︎ □︎◆︎⧫︎📪︎ ●︎□︎❖︎♏︎ ⍓︎□︎◆︎ ♌︎♌︎📪︎ ⧫︎♋︎●︎🙵 ⬧︎□︎□︎■︎📪︎ □︎🙵♋︎⍓︎ ●︎♏︎⧫︎🕯︎⬧︎ ♑︎♏︎⧫︎ ⬧︎□︎□︎□︎□︎□︎ ❍︎◆︎♍︎♒︎ ♌︎❒︎◆︎■︎♍︎♒︎ ⬧︎□︎□︎■︎`}
     },
     {
         tone: 'friendsStill',
         relation: 'friend',
         why: 'dogRoll',
         message: function (personName) {
-            return `${personName} the copy for a friendship over just a friend dog roll`}
+            return `${personName}, omg, omg, omg, omg. My dog just did the cutest thing, she's on her back and -- well you really have to be here to see it. Can't meet up later, brunch soon?`}
     },
     {
         tone: 'friendsStill',
         relation: 'friend',
         why: 'napRecover',
         message: function (personName) {
-            return `${personName} the copy for a friendship over just a friend nap recover`}
+            return `Heyyyyy ${personName}. Just woke up, can't make it tonight. Wish I could, brunch soon? `}
     },
     {
         tone: 'friendsStill',
@@ -171,91 +171,91 @@ myApp.messages = [
         name: '"Friend"',
         why: 'actualExcuse',
         message: function (personName) {
-            return `${personName} the copy for a friendshipover just a friend actual excuse`}
+            return `${personName}, work amirite? I can't meet up anymore because I need to work, go to the bank and like some other very important actual things happening. Love ya, brunch next week?`}
     },
     {
         tone: 'friendsStill',
         relation: 'family',
         why: 'reallyHot',
         message: function (personName) {
-            return `${personName} the copy for a friendship over family member really hot`}
+            return `HEY ${personName}, you really are my fav family member. However, it is too hot to trot. Let's reschedule? Maybe for winter? or Fall? Or like even spring would be good. We'll do brunch 🍳 `}
     },
     {
         tone: 'friendsStill',
         relation: 'family',
         why: 'betterOffer',
         message: function (personName) {
-            return `${personName} the copy for a friendship over family member better offer`}
+            return `Hi ${personName}, omg so you'll never guess what just happened? I was walking down the street and I got a way better offer for tonight. Family-shamily right? Love you, let's do lunch next month? 🥪`}
     },
     {
         tone: 'friendsStill',
         relation: 'family',
         why: 'calledBack',
         message: function (personName) {
-            return `${personName} the copy for a friendshipOver family member who got called back to the mothership`}
+            return `ET PHONE HOOOOOOOME AND MOM SAYS HIIIIIIIIIIIIII`}
     },
     {
         tone: 'friendsStill',
         relation: 'family',
         why: 'dogRoll',
         message: function (personName) {
-            return `${personName} the copy for a friendshipOver family member whos dog rolled over`}
+            return `HEY ${personName}, AH! So, the dog is rolled over into the cutest position in my arms. Can't go out tonight, let's meet up next week? Love youuuuuu`}
     },
     {
         tone: 'friendsStill',
         relation: 'family',
         why: 'napRecover',
         message: function (personName) {
-            return `${personName} the copy for a friendshipOver family member who needs to recover from a nap`}
+            return `Hello ${personName}. Wow, so out of it. Had THE most intense nap. Love you but can't hang tonight. Let's get together before the next faily reunion? LUV U BB`}
     },
     {
         tone: 'friendsStill',
         relation: 'family',
         why: 'actualExcuse',
         message: function (personName) {
-            return `${personName} the copy for a friendshipOver family member who has an actual excuse`}
+            return `${personName}, I got work. Your family, you'll get it. BYE.`}
     },
     {
         tone: 'friendsStill',
         relation: 'partner',
         why: 'reallyHot',
         message: function (personName) {
-            return `${personName} the copy for a friendship over partner member really hot`}
+            return `Hi ${personName}, babe, you know how I feel about this heat right? I can't do anything tonight but stick my head in the freezer. Love you, but just not tonight`}
     },
     {
         tone: 'friendsStill',
         relation: 'partner',
         why: 'betterOffer',
         message: function (personName) {
-            return `${personName} the copy for a friendship over partner member better offer`}
+            return `${personName}, so weird but my ex just called and wants to grab a coffee. Let's raincheck our date? I just want to make sure that you're still the one - ya know? Love ya sweetiecakes 💚`}
     },
     {
         tone: 'friendsStill',
         relation: 'partner',
         why: 'calledBack',
-        message: function (personName) {
-            return `${personName} the copy for a friendshipOver partner member who got called back to the mothership`}
+        message: function () {
+            return `♋︎♒︎ ●︎♋︎🙵♎︎🙰♐︎🖴︎🙵♋︎♎︎🙰 ♋︎ ⬧︎♎︎🙵🙰♒︎♐︎◆︎♏︎♒︎ ⬧︎♒︎🙰♍︎♑︎⬧︎🙰🙵♒︎♑︎♏︎ 🙵⬧︎♎︎♐︎🙰♓︎♏︎♒︎♒︎♒︎♒︎ ●︎⬧︎♎︎♐︎🖴︎♏︎♓︎♐︎ 📂︎🗏︎🖰︎🖲︎🖮︎🖲︎🖰︎🗏︎🗄︎⌛︎ ●︎♎︎♐︎🙰♒︎`}
     },
     {
         tone: 'friendsStill',
         relation: 'partner',
         why: 'dogRoll',
         message: function (personName) {
-            return `${personName} the copy for a friendshipOver partner member whos dog rolled over`}
+            return `${personName}, babe omg the dog just ROLLED OVER. Can't make our date tonight. I love you, but this is too cute to pass up, ya know?`}
     },
     {
         tone: 'friendsStill',
         relation: 'partner',
         why: 'napRecover',
         message: function (personName) {
-            return `${personName} hey the copy for a friendshipOver partner member who needs to recover from a nap`}
+            return `Hi ${personName}! Just had a crazy nap. I can't do dinner tonight, or tomorrow. This was one hell of a nap. I love you but I just need some space to recover from this`}
     },
     {
         tone: 'friendsStill',
         relation: 'partner',
         why: 'actualExcuse',
         message: function (personName) {
-            return `${personName} the  copy for a friendshipOver partner= who has an actual excuse`}
+            return `${personName}, ugh babe! The boss is keeping me late tonight. Can you ever forgive me? Sorry not sorry, love you.`}
     }
 ]
 

@@ -225,6 +225,15 @@ li {
         text-align: center;
         text-shadow: 1px 1px 1px rgba(241, 143, 1, 0.7), 2px 2px 1px rgba(241, 143, 1, 0.7), 3px 3px 1px rgba(241, 143, 1, 0.7), 4px 4px 1px rgba(241, 143, 1, 0.7), 5px 5px 1px rgba(241, 143, 1, 0.7), 6px 6px 1px rgba(241, 143, 1, 0.7), 7px 7px 1px rgba(241, 143, 1, 0.7), 8px 8px 1px rgba(241, 143, 1, 0.7), 9px 9px 1px rgba(225, 85, 84, 0.8), 10px 10px 1px rgba(225, 85, 84, 0.8), 11px 11px 1px rgba(225, 85, 84, 0.8), 12px 12px 1px rgba(225, 85, 84, 0.8), 13px 13px 1px rgba(225, 85, 84, 0.8), 14px 14px 1px rgba(225, 85, 84, 0.8), 15px 15px 1px rgba(225, 85, 84, 0.8), 16px 16px 1px rgba(225, 85, 84, 0.8), 17px 17px 1px rgba(225, 85, 84, 0.8), 18px 18px 1px rgba(225, 85, 84, 0.8);
         margin-bottom: 20px; } }
+    @media (max-width: 320px) {
+      .header h1 {
+        font-size: 3rem;
+        font-family: 'Karla', sans-serif;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: 1px 1px 1px rgba(241, 143, 1, 0.7), 2px 2px 1px rgba(241, 143, 1, 0.7), 3px 3px 1px rgba(241, 143, 1, 0.7), 4px 4px 1px rgba(241, 143, 1, 0.7), 5px 5px 1px rgba(241, 143, 1, 0.7), 6px 6px 1px rgba(241, 143, 1, 0.7), 7px 7px 1px rgba(241, 143, 1, 0.7), 8px 8px 1px rgba(241, 143, 1, 0.7), 9px 9px 1px rgba(225, 85, 84, 0.8), 10px 10px 1px rgba(225, 85, 84, 0.8), 11px 11px 1px rgba(225, 85, 84, 0.8), 12px 12px 1px rgba(225, 85, 84, 0.8), 13px 13px 1px rgba(225, 85, 84, 0.8), 14px 14px 1px rgba(225, 85, 84, 0.8), 15px 15px 1px rgba(225, 85, 84, 0.8), 16px 16px 1px rgba(225, 85, 84, 0.8), 17px 17px 1px rgba(225, 85, 84, 0.8), 18px 18px 1px rgba(225, 85, 84, 0.8);
+        margin-bottom: 10px; } }
   .header p {
     font-family: 'Karla', sans-serif;
     color: white;
@@ -242,6 +251,9 @@ li {
       .header p {
         font-size: 1.6rem;
         line-height: 32px; } }
+    @media (max-width: 320px) {
+      .header p {
+        font-size: 1.2rem; } }
   .header .start {
     font-family: 'Karla', sans-serif;
     background: white;
@@ -264,6 +276,11 @@ li {
         font-size: 1.5rem;
         padding: 12px;
         letter-spacing: 1px; } }
+    @media (max-width: 320px) {
+      .header .start {
+        margin-top: 7px;
+        font-size: 1.3rem;
+        padding: 10px; } }
     .header .start:hover {
       background: rgba(225, 85, 84, 0.8); }
 
@@ -546,6 +563,9 @@ li {
       -webkit-animation: 2s bulge infinite ease-out;
       animation: 2s bulge infinite ease-out; }
       @media (max-width: 450px) {
+        .phone .phone-body .typing-indicator {
+          display: none; } }
+      @media (max-width: 320px) {
         .phone .phone-body .typing-indicator {
           display: none; } }
       .phone .phone-body .typing-indicator span {

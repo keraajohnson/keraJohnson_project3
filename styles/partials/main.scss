@@ -141,6 +141,9 @@
                     @include break-point(big-phone) {
                         display: none;
                     }
+                    @include break-point(small-phone) {
+                        display: none;
+                    }
                     background-color: $message;
                     will-change: transform;
                     width: auto;

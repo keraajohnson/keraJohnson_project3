@@ -36,12 +36,12 @@
             }
             // big-phone break-point
             @include break-point(big-phone) {
-                @include header-font(3.5rem);
+                @include header-font(3.2rem);
                 margin-bottom: 20px;
             }
             @include break-point(small-phone) {
-                @include header-font(2.6rem);
-                margin-bottom: 10px;
+                @include header-font(2.3rem);
+                margin-bottom: 5px;
             }
         }
         p {
@@ -57,16 +57,20 @@
             }
             @include break-point(tablet) {
                 font-size: 2rem;
+                line-height: 30px;
+                color: green;
             }
             // big-phone break-point
             @include break-point(big-phone) {
                 font-size: 1.6rem;
-                line-height: 32px;
+                line-height: 22px;
+                color: blue;
             }
             // small-phone break-point
             @include break-point(small-phone) {
-                font-size: 1.2rem;
-                line-height: 25px;
+                font-size: 1.1rem;
+                line-height: 20px;
+                color: red;
             }
         }
         .start {
@@ -93,9 +97,9 @@
             }
             // small-phone break-point
             @include break-point(small-phone) {
-                margin-top: 5px;
-                font-size: 1.3rem;
-                padding: 10px;
+                margin-top: 3px;
+                font-size: 1.2rem;
+                padding: 8px;
             }
                 &:hover {
                     background: $final;

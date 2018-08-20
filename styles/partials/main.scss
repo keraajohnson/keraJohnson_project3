@@ -17,13 +17,13 @@
     // big-phone break-point
     @include break-point(big-phone) {
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         margin-top: 0;
     }
     // small break-point
     @include break-point(small-phone) {
         width: 100%;
-        height: 93vh;
+        height: 100vh;
         margin-top: 0;
     }
         .phone-heading {

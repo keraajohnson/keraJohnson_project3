@@ -315,12 +315,12 @@ li {
   @media (max-width: 414px) {
     .phone {
       width: 100%;
-      height: 90vh;
+      height: 100vh;
       margin-top: 0; } }
   @media (max-width: 375px) {
     .phone {
       width: 100%;
-      height: 93vh;
+      height: 100vh;
       margin-top: 0; } }
   .phone .phone-heading {
     display: -webkit-box;

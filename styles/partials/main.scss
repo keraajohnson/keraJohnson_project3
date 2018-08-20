@@ -10,6 +10,7 @@
     @include break-point(small-desktop) {
         width: 80%;
     }
+    // tablet break-point
     @include break-point(tablet) {
         width: 90%;
     }
@@ -72,7 +73,6 @@
         }
         .phone-body {
             background: $white;
-            // padding-top: 100px;
             height: 100%;
                 .phone-main {
                     overflow: scroll;
@@ -91,6 +91,7 @@
                             width: 85%;
                             margin: 20px auto;
                         }
+                        // small-phone break-point
                         @include break-point(small-phone) {
                             width: 90%;
                             margin: 10px auto;
@@ -103,7 +104,7 @@
                                 @include label-font;
                                 transition: 1s all ease;
                                     &:hover {
-                                        color: #212d40;
+                                        color: $final;
                                     }
                             }
                             label[for="really-hot"],
@@ -117,7 +118,7 @@
                                 @include label-font-block;
                                 transition: 1s all ease;
                                     &:hover {
-                                       color: #212d40;
+                                       color: $final;
                                     }
                             }
                             &.hide {
@@ -137,6 +138,7 @@
                                 @include break-point(big-phone) {
                                     left: 0%;
                                 }
+                                // small-phone break-point
                                 @include break-point(small-phone) {
                                     left:0%;
                                 }
@@ -144,7 +146,6 @@
                     }
                     .relationship-input {
                         margin-top: 100px;
-
                     }
                 } 
                 .typing-indicator {
@@ -152,6 +153,7 @@
                     @include break-point(big-phone) {
                         display: none;
                     }
+                    // small-phone break-point
                     @include break-point(small-phone) {
                         display: none;
                     }

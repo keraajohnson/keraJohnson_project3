@@ -441,7 +441,7 @@ li {
           .phone .phone-body .phone-main .final-message label[for="friend"]:hover,
           .phone .phone-body .phone-main .final-message label[for="family"]:hover,
           .phone .phone-body .phone-main .final-message label[for="partner"]:hover {
-            color: #212d40; }
+            color: rgba(225, 85, 84, 0.8); }
         .phone .phone-body .phone-main .relationship-input label[for="really-hot"],
         .phone .phone-body .phone-main .relationship-input label[for="better-offer"],
         .phone .phone-body .phone-main .relationship-input label[for="called-back"],
@@ -535,7 +535,7 @@ li {
           .phone .phone-body .phone-main .final-message label[for="actual-excuse"]:hover,
           .phone .phone-body .phone-main .final-message label[for="friendship-over"]:hover,
           .phone .phone-body .phone-main .final-message label[for="friends-still"]:hover {
-            color: #212d40; }
+            color: rgba(225, 85, 84, 0.8); }
         .phone .phone-body .phone-main .relationship-input.hide,
         .phone .phone-body .phone-main .reason-input.hide,
         .phone .phone-body .phone-main .tone-input.hide,

@@ -266,6 +266,7 @@ myApp.relationshipInfo = {
     family: '👨‍👩‍👧‍👦 '
 }
 
+// function to change the header when a realtionship is clicked
 myApp.changeHeader = function () {
     $('.relationship').on('click', function() { 
         const relationShipSelection = $(this).val();
@@ -274,6 +275,7 @@ myApp.changeHeader = function () {
     });
 };
 
+// function to hide and show the dots on click
 myApp.textDisappear = function () {
     $('input').on('click', function (){
         const getParents = $(this).parents();
@@ -292,12 +294,13 @@ myApp.textDisappear = function () {
         }   
     });
 }  
-
+// fuction to update the scroll on the page
 myApp.updateScroll = function () {
     var element = document.getElementById("phone-main");
     element.scrollTop = element.scrollHeight;
 }
 
+// function to hide the header element on the click of a button
 myApp.hideHeader = function () {
     $('.start').on('click', function (){
         console.log('click');
@@ -305,12 +308,14 @@ myApp.hideHeader = function () {
     })
 }
 
+// function to hide the dots when the input field is selected
 myApp.inputDots = function () {
     $('.who-bail').on('click', function () {
         $('.typing-indicator').addClass('hide-dots');
     });
 }
 
+// submit function 
 myApp.submitChoice = function () {
     $('form').on('submit', function (e) {
         // preventing submit default 
@@ -328,18 +333,21 @@ myApp.submitChoice = function () {
         myApp.secondFilteredArray = myApp.firstFilteredArray.filter(message => message.why === myApp.userWhyBailChoice);
         myApp.finalFilteredArray = myApp.secondFilteredArray.filter(message => message.tone === myApp.userToneChoice);
 
+        // function to show the final message 
         myApp.finalMsg = function () {
             $('.final-message').removeClass('hide');
             $('.your-excuse').append(`<p>${myApp.finalFilteredArray[0].message(myApp.personName)}</p>`);
             myApp.updateScroll(); 
         }   
         
+        // function to show the final message on a delay 
         myApp.showFinalMsg = function () {
             setTimeout(myApp.finalMsg, 2000);
         }
 
         myApp.showFinalMsg();
 
+        // clears the input field on submit
         $('.who-bail').val('');
         });
     };    

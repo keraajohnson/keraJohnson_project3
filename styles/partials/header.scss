@@ -4,7 +4,8 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    background-color:rgba(33, 45, 64, 1);
+    background: #1F2C42;
+    background-repeat: repeat;
     z-index: 20;
     padding: 1px;
     transition: 1s all ease;
@@ -40,7 +41,7 @@
                 margin-bottom: 20px;
             }
             @include break-point(small-phone) {
-                @include header-font(2.7rem);
+                @include header-font(3rem);
                 margin-bottom: 20px;
             }
         }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,17 @@
     <link rel="stylesheet" href="styles/style.css">
     <title></title>
 </head>
+
 <body>
     <header class="header">
         <div class="wrapper">
-            <h1>Sorry Not Sorry</h1>
-            <p>We all have that friend, family or future ex partner that we just can't commit to. You know the one, the one you text after a few drinks, thinking to yourself "they aren't that bad". But in reality they are that bad, and you've already committed your Friday night! You can't just use the same old "Sorry, I have to work late" because first of all, you aren't sorry and secondly you don't even work. Use <span class="sorry">Sorry Not Sorry</span> to send that perfect snarky text to make sure you never have to bail again. </p>
+            <h1>Excuses, Excuses</h1>
+            <p>We all have that friend, family or future ex partner that we just can't commit to. You know the one, the
+                one you text after a few drinks, thinking to yourself "they aren't that bad". But in reality they are
+                that bad, and you've already committed your Friday night! You can't just use the same old "Sorry, I
+                have to work late" because first of all, you aren't sorry and secondly you don't even work. Use <span
+                    class="sorry">Sorry Not Sorry</span> to send that perfect snarky text to make sure you never have
+                to bail again. </p>
             <button class="start">Let's Get Bailing</button>
         </div>
     </header>
@@ -45,19 +52,22 @@
                     <section class="phone-main" id="phone-main">
                         <!-- 4.1 relationship-input -->
                         <section class="relationship-input speech-bubble">
-                            <p>I get it, you like your friends but only when you aren't tired. So, who do you want to bail on tonight?</p>
-                            <label for="friend">💃BFF</label>
-                            <input type="radio" name="who-are-they" class="friend relationship" id="friend" value="friend">
-                           
-                            <label for="family">👫fam</label>
-                            <input type="radio" name="who-are-they" class="family relationship" id="family" value="family">
-                            
-                            <label for="partner">😍my boo</label>
-                            <input type="radio" name="who-are-they" class="partner relationship" id="partner" value="partner">
+                            <p>I get it, you like your friends but only when you aren't tired. So, who do you want to
+                                bail on tonight?</p>
+                            <div class="answers">
+                                <label for="friend">💃BFF</label>
+                                <input type="radio" name="who-are-they" class="friend relationship" id="friend" value="friend">
+    
+                                <label for="family">👫fam</label>
+                                <input type="radio" name="who-are-they" class="family relationship" id="family" value="family">
+    
+                                <label for="partner">😍my boo</label>
+                                <input type="radio" name="who-are-they" class="partner relationship" id="partner" value="partner">
+                            </div>
                         </section>
                         <!-- 4.2 reason-input -->
                         <section class="reason-input speech-bubble hide">
-                            <p>Okay, so you don't want to hang out -- it's cool. Why do you want to bail?</p>
+                            <p>Pick (at totally legit, not at all rude) reason to bail tonight</p>
                             <ul>
                                 <li>
                                     <label for="really-hot"> 🔥Ugh Too Hot Outside🔥</label>
@@ -87,7 +97,8 @@
                         </section>
                         <!-- 4.3 tone-input -->
                         <section class="tone-input speech-bubble hide">
-                            <p>Cool, that's a "great" reason - so, do you want to see this person again or are you over it?</p>
+                            <p>Cool, that's a "great" reason - so, do you want to see this person again or are you over
+                                it?</p>
                             <ul>
                                 <li>
                                     <label for="friendship-over">🙅‍♀️I'm seriously over it🙅‍♀️</label>
@@ -106,7 +117,7 @@
                         </section>
                         <section class="final-message speech-bubble-final hide">
                             <div class="your-excuse">
-                            
+
                             </div>
                         </section>
                         <div class="typing-indicator hide-dots">
@@ -139,4 +150,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.2.0/jquery.smooth-scroll.min.js"></script>
     <script src="scripts/scripts.js"></script>
 </body>
+
 </html>
